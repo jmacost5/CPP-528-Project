@@ -1,34 +1,40 @@
-title: Project CPP 528
-author: Jestrii Acosta, Kara Brick, Mariam Mahmoud , Megan Rowland , Rached Fares
-description: Architect is a theme for GitHub Pages.
+title: "Project CPP 528"
+author: "Jestrii Acosta, Kara Brick, Mariam Mahmoud , Megan Rowland , Rached Fares"
+description: "Architect is a theme for GitHub Pages."
+
 # Jekyll settings
-permalinkm: /:title/
-paginate: 2
-exerpt_seproator: "n\n\n"
-# Theme Setings
-show_exerpts: false
-date_format: "%B, %d, %Y"
-dark_theme: true
-dark_header: false
-minimal_theme: true
-naivgation:
-  - exec.md
-  - index.md
-  - about.md
-  - test.md
- icons:               #show icons in the header, for all possible icons see http://fontaesomw.io/icons/
- # envelope: "mailto:niklasbuschmann@users.noreply.github.com"
- # github: "https//github.com/R-Class.CPP-528-Project/edit/main"
- comments:
- #disqus: "disqus-contrast"
- #isso: "comments.mysite.org"
- remote_theme: niklasbuschmann/contrast
- pluginns:
- -jekyll-remote-theme
- -jekyll-feed
- -jekyll-paginate
- -jekyll-default-layout
- 
-show_downloads: true
-google_analytics:
+permalink: /:title/          # see https://jekyllrb.com/docs/permalinks/
+paginate: 2                  # number of articles per page, remove to disable pagination
+excerpt_separator: "\n\n\n"  # indicates the end of the excerpt by two blank lines
+
+# Theme settings
+show_excerpts: false         # show article previews on the home page instead of headlines
+date_format: "%B %d, %Y"     # see http://shopify.github.io/liquid/filters/date/
+dark_theme: true             # enables dark mode
+dark_header: false           # uses dark header whether dark_theme is enabled or not
+minimal_theme: true          # radically minimalistic theme
+
+navigation:                  # show navigation links in the header	
+  - index.md  # Landing page with Table of Contents
+  - exec.md 
+
+icons:                       # show icons in the header, for all possible icons see http://fontawesome.io/icons/
+  # envelope: "mailto:niklasbuschmann@users.noreply.github.com"
+  # github: "https://github.com/R-Class/cpp-528-template/edit/main/"
+  
+  
+comments:                    # embed disqus or isso comments
+#  disqus: "disqus-contrast"
+#  isso: "comments.mysite.org"
+
+remote_theme: niklasbuschmann/contrast
+
+plugins: 
+ - jekyll-remote-theme
+ - jekyll-feed
+ - jekyll-paginate
+ - jekyll-default-layout
+
+#theme: jekyll-theme-slate
+
 theme: jekyll-theme-minimal
