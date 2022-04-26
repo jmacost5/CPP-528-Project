@@ -5,8 +5,6 @@ date: '2022-04-24'
 output: html_document
 ---
 
-<<<<<<< Updated upstream
-=======
 ### Introduction: 
 
 ### This analysis looks at median home value change and growth under two different programs - both are tax-credit incentive based, and both strive to provide affordable housing. One program is available to non-profit and for profit entities (LIHTC), and one is for private investors (NMTC). They are also allotted slightly different parameters regarding the poverty rate in the tracts they may invest in affordable housing in. Three different variables are also added in to our models to understand how they may be influencing median home value change between 2000 and 2010. The variables are: percent college graduates, percent unemployment, and percent Black population. 
@@ -14,13 +12,12 @@ output: html_document
 ### TLDR: Exploring neighborhood change through the inclusion of federal program data. Using the difference-in-difference framework to estimate the impact of the NMTC and LIHTC federal programs and determine if the programs are effective at catalyzing neighborhood improvement. 
 
 
->>>>>>> Stashed changes
 ```{r setup, include=FALSE, echo=FALSE, fig.align='center', error=FALSE}
 knitr::opts_chunk$set(echo = FALSE, message = FALSE)
 ```
-###Exlporing neighborhood change through the inclusion of federal program data. Using the difference-in-difference framework to estimate the impact of the NMTC and LIHTC federal programs and determine if the programs are effective at catalyzing neighborhood improvement. 
 
-```{r setup, echo=FALSE, include=FALSE, fig.align = "center", dev='png'}
+
+```{r message=FALSE, echo=FALSE, warning=FALSE, include=FALSE}
 options(warn=-1)
 # load necessary packages ----
 library( dplyr )
@@ -31,6 +28,7 @@ library( stargazer )
 library( scales )
 library(import)
 library(tidyverse)
+library(kableExtra)
 
 source(here::here("labs/wk06/lab_06_source.R"))
 # note: all of these are R objects that will be used throughout this .rmd file
@@ -52,13 +50,16 @@ source(here::here("labs/wk06/lab_06_source.R"))
 #detach("package:import", unload = TRUE)
 ```
 
+
 ### Descriptive Statistics
 
 ### A section of the dataset we'll be working with
 
-```{r message=FALSE, results='asis'}
+```{r message=FALSE}
+head(d, n = c(4,10)) %>%
+  kbl() %>%
+  kable_minimal()
 
-pander(data.table::data.table(d[1,1:15]))
 
 
 ```
@@ -68,9 +69,9 @@ pander(data.table::data.table(d[1,1:15]))
 ### Home values change and growth - summary statistics
 
 
-```{r, results='asis'}
+```{r, results = 'asis'}
 # show summary statistics
-stargazer::stargazer( d, 
+stargazer::stargazer( df, 
                       type=S_TYPE,
                       title = "Home values- All data",
                       digits=0, 
@@ -82,38 +83,25 @@ stargazer::stargazer( d,
 
 ### First we will look at how the two programs differ in poverty rates of the tracts selected for investment. 
 
-<<<<<<< Updated upstream
-
-```{r message=FALSE, echo=FALSE}
-=======
 ```{r}
->>>>>>> Stashed changes
 ### POVERTY RATES
 gridExtra::grid.arrange( PLOTS$pov_rate_2000$nmtc, 
                          PLOTS$pov_rate_2000$lihtc, 
                          nrow = 1 )
 ```
 
-<<<<<<< Updated upstream
-```{r message=FALSE, echo=FALSE}
-=======
 ### Next we will look at median home values.
 
 ```{r message=FALSE, echo=FALSE, message=FALSE}
->>>>>>> Stashed changes
 ### HOME VALUES
 gridExtra::grid.arrange( PLOTS$mhv_2000$nmtc, 
                          PLOTS$mhv_2000$lihtc, 
                          nrow = 1 )
 ```
 
-<<<<<<< Updated upstream
-```{r message=FALSE, echo=FALSE}
-=======
 ### And finally median home value growth.
 
 ```{r message=FALSE, echo=FALSE, message=FALSE, warning=FALSE}
->>>>>>> Stashed changes
 ### MHV Growth Rates (DV in Model)
 gridExtra::grid.arrange( PLOTS$mhv_growth$lihtc, 
                          PLOTS$mhv_growth$nmtc, 
@@ -122,253 +110,13 @@ gridExtra::grid.arrange( PLOTS$mhv_growth$lihtc,
 
 
 
-```{r message=FALSE, echo=FALSE}
-### Variables and Wrangling
 
-# remember to use here::here() when importing data
-d1 <- readRDS( here::here( "data/rodeo/LTDB-2000.rds" ) )
-d2 <- readRDS( here::here( "data/rodeo/LTDB-2010.rds" ) )
-md <- readRDS( here::here( "data/rodeo/LTDB-META-DATA.rds" ) )
-
-d1 <- dplyr::select( d1, - year )
-d2 <- dplyr::select( d2, - year )
-
-d <- merge( d1, d2, by="tractid" )
-d <- merge( d, md, by="tractid" )
-
-# keep only the urban tracts
-d <- dplyr::filter( d, urban == "urban" )
-
-# obtain NMTC data
-NMTC_URL <- "https://raw.githubusercontent.com/DS4PS/cpp-528-spr-2020/master/labs/data/raw/NMTC/nmtc-sheet-01.csv"
-nmtc <- read.csv( NMTC_URL, stringsAsFactors=F )
-
-# obtain LIHTC data
-LIHTC_URL <- "https://raw.githubusercontent.com/DS4PS/cpp-528-spr-2020/master/labs/data/raw/LIHTC/LIHTCPUB.csv"
-lihtc <- read.csv( LIHTC_URL, stringsAsFactors=F )
-
-# create a key that will allow us to obtain federal data for each tract ----
-# remove anything not a number from the string
-d$id2 <- gsub( "[^0-9]", "", d$tractid )
-
-# fix IDs so they are match
-d$id2 <- as.numeric( d$id2 )
-
-# aggregate federal programs such that there is one record per tract ----
-lihtc.dollars <-
-  lihtc %>% 
-  dplyr::filter( yr_alloc >= 2000 & yr_alloc <= 2010 ) %>%
-  dplyr::group_by( fips2010 ) %>%
-  dplyr::summarize( num.lihtc = dplyr::n(), lihtc.total = sum( allocamt, na.rm=T ) )
-
-# need to convert from currency to numeric
-# current format: 
-# head( nmtc$QLICI.Amount )
-# [1] "$300,000.00 "   "$1,008,750.00 " "$977,000.00 "
-
-# remove dollar sign and commas
-nmtc$amount <- gsub( "[,$]", "", nmtc$QLICI.Amount )
-
-# head(  nmtc$amount  )
-# "300000.00 "  "1008750.00 " "977000.00 "
-
-# convert characters to numeric 
-nmtc$amount <- as.numeric( nmtc$amount ) %>% round(0)
-
-# head(  nmtc$amount  )
-# [1]  300000 1008750  977000
-
-nmtc.dollars <- 
-  nmtc %>% 
-  dplyr::filter( Origination.Year >= 2000 & Origination.Year <= 2010 ) %>%
-  dplyr::group_by( X2010.Census.Tract ) %>% 
-  dplyr::summarize( num.nmtc = dplyr::n(), nmtc.total = sum( amount, na.rm=T ) )
-
-# merge federal data onto census tracts ----
-d.fed <- merge( d, nmtc.dollars, by.x="id2", by.y="X2010.Census.Tract", all.x=T )
-d.fed <- merge( d.fed, lihtc.dollars, by.x="id2", by.y="fips2010", all.x=T )
-
-# recode tracts that had no grants from NA to 0 ---
-d.fed$num.nmtc[ is.na(d.fed$num.nmtc) ] <- 0
-d.fed$nmtc.total[ is.na(d.fed$nmtc.total) ] <- 0
-
-d.fed$num.lihtc[ is.na(d.fed$num.lihtc) ] <- 0 
-d.fed$lihtc.total[ is.na(d.fed$lihtc.total) ] <- 0
-
-
-# adjust 2000 home values for inflation 
-mhv.00 <- d$mhmval00 * INFLATION_RATE  
-mhv.10 <- d$mhmval12
-
-# change in MHV in dollars
-mhv.change <- mhv.10 - mhv.00
-
-
-# drop low year 2000 median home values
-# to avoid unrealistic growth rates.
-#
-# tracts with homes that cost less than
-# $10,000 are outliers
-# approximately 200 out of 59,000 cases 
-sum( mhv.00 < 10000 ) 
-mhv.00[ mhv.00 < 10000 ] <- NA
-
-# change in MHV in percent
-mhv.growth <- 100 * ( mhv.change / mhv.00 )
-
-# store mini data frame to be used for descriptive statistics ----
-df <- data.frame( MedianHomeValue2000=mhv.00, 
-                  MedianHomeValue2010=mhv.10, 
-                  MHV.Change.00.to.10=mhv.change,
-                  MHV.Growth.00.to.12=mhv.growth )
-
-# add variables to the main data frame ----
-d.fed$mhv.00 <- mhv.00
-d.fed$mhv.10 <- mhv.10
-d.fed$mhv.change <- mhv.change
-d.fed$mhv.growth <- mhv.growth 
-
-# select a few variables ----
-d.fed <- dplyr::select( d.fed, 
-                    
-                    tractid, cbsa, cbsaname,            # ids / units of analysis
-                    
-                    mhv.00, mhv.10, mhv.change, mhv.growth,    # home value 
-                    
-                    hinc00, hu00, own00, rent00,        # ses
-                    hinc12, hu10, own10, rent10,
-                    
-                    empclf00, clf00, unemp00, prof00,   # employment 
-                    empclf12, clf12, unemp12, prof12,
-                    
-                    dpov00, npov00,                     # poverty
-                    dpov12, npov12,
-                    
-                    ag25up00, hs00, col00,              # education 
-                    ag25up12, hs12, col12,
-                    
-                    pop00.x, nhwht00, nhblk00, hisp00, asian00,   # race
-                    pop10, nhwht10, nhblk10, hisp10, asian10,
-                    
-                    num.nmtc, nmtc.total,              # tax policy data
-                    num.lihtc, lihtc.total             # aggregated by census tract
-                    
-) # end select
-
-
-# create new variables ----
-d.fed <- 
-  d.fed %>%
-  dplyr::mutate( 
-    # 2000 variables
-    p.white.00 = 100 * nhwht00 / pop00.x,
-    p.black.00 = 100 * nhblk00 / pop00.x,
-    p.hisp.00 = 100 * hisp00 / pop00.x, 
-    p.asian.00 = 100 * asian00 / pop00.x,
-    p.hs.edu.00 = 100 * (hs00+col00) / ag25up00,
-    p.col.edu.00 = 100 * col00 / ag25up00,
-    p.prof.00 = 100 * prof00 / empclf00,
-    p.unemp.00 = 100 * unemp00 / clf00,
-    pov.rate.00 = 100 * npov00 / dpov00,
-    
-    # 2010 variables
-    p.white.10 = 100 * nhwht10 / pop10,
-    p.black.10 = 100 * nhblk10 / pop10,
-    p.hisp.10 = 100 * hisp10 / pop10, 
-    p.asian.10 = 100 * asian10 / pop10,
-    p.hs.edu.10 = 100 * (hs12+col12) / ag25up12,
-    p.col.edu.10 = 100 * col12 / ag25up12,
-    p.prof.10 = 100 * prof12 / empclf12,
-    p.unemp.10 = 100 * unemp12 / clf12,
-    pov.rate.10 = 100 * npov12 / dpov12 ) %>%
-  # remove any NA or Inf values
-  na.omit(use = "everything")
-
-# inflation adjust income  ----
-d.fed$hinc00 <- INFLATION_RATE * d.fed$hinc00
-
-# create new variables by cbsa ----
-d.fed<-
-  d.fed %>%
-  dplyr::group_by( cbsaname ) %>%
-  dplyr::mutate( # metro rank of home value in 2000
-    metro.mhv.pct.00 = dplyr::ntile( mhv.00, 100 ),
-    # metro rank of home value in 2010
-    metro.mhv.pct.10 = dplyr::ntile( mhv.10, 100 ),
-    # median pay for metro area 2000
-    metro.median.pay.00 = median( hinc00, na.rm=T ),
-    # median pay for metro area 2010
-    metro.median.pay.10 = median( hinc12, na.rm=T ),
-    # tract rank in metro area for diversity (% non-white)
-    metro.diversity.rank.00 = dplyr::ntile( (100-p.white.00), 100 ),
-    # metro total population 2000
-    metro.pop.total.00 = sum( pop00.x, na.rm=T ),
-    # metro total population 2010
-    metro.pop.total.10 = sum( pop10, na.rm=T ) ) %>%
-  dplyr::ungroup() %>%
-  dplyr::mutate( # change in relative rank of mhv in metro area 2000-2010
-    metro.mhv.pctile.change = metro.mhv.pct.10 - metro.mhv.pct.00,
-    # growth in ave pay in metro
-    metro.pay.change = metro.median.pay.10 - metro.median.pay.00,
-    # metro population growth 2000-2010
-    metro.pop.growth = ( metro.pop.total.10 - metro.pop.total.00 ) / metro.pop.total.00,
-    # increase in the proportion of whites in tract 
-    increase.p.white = p.white.10 - p.white.00  )
-
-# Create a true/false code for recipient tracts ----
-d.fed$LIHTC <- ifelse( d.fed$num.lihtc > 0, "YES", "NO" )
-d.fed$NMTC <- ifelse( d.fed$num.nmtc > 0, "YES", "NO" )
-
-# create a growth column within the data frame ----
-d.fed$growth <- d.fed$mhv.growth
-d.fed$growth[ d.fed$growth > 200 ] <- NA
-
-# store plots in a list for easy access ----
-PLOTS <-
-  list(
-    "pov_rate_2000" = list(
-      "nmtc" = ggplot2::ggplot( d.fed, ggplot2::aes(x=pov.rate.00, fill=NMTC )) +
-        ggplot2::geom_density(alpha=0.4) + 
-        ggplot2::ggtitle("2000 Poverty Rate of Recipient and Non-Recipient Communities"),
-      "lihtc" = ggplot2::ggplot( d.fed, ggplot2::aes(x=pov.rate.00, fill=LIHTC)) +
-        ggplot2::geom_density(alpha=0.4) +
-        ggplot2::ggtitle("2000 Poverty Rate of Recipient and Non-Recipient Communities")
-    ),
-    "mhv_2000" = list(
-      "nmtc" = ggplot2::ggplot( d.fed, ggplot2::aes(x=log10(mhv.00), fill=NMTC )) +
-        ggplot2::geom_density( alpha=0.4 ) +
-        ggplot2::ggtitle("2000 Median Home Value of Recipient and Non-Recipient Communities"),
-      "lihtc" = ggplot2::ggplot( d.fed, ggplot2::aes(x=log10(mhv.00), fill=LIHTC )) +
-        ggplot2::geom_density( alpha=0.4 )  +
-        ggplot2::ggtitle("2000 Median Home Value of Recipient and Non-Recipient Communities")
-    ),
-    "mhv_growth" = list(
-      "nmtc" = ggplot2::ggplot( d.fed, ggplot2::aes(x=growth, fill=NMTC )) +
-        ggplot2::geom_density( alpha=0.4 )  +
-        ggplot2::ggtitle("MHV Growth 2000 to 2010: Recipients vs Non-Recipients"),
-      "lihtc" = ggplot2::ggplot( d.fed, ggplot2::aes(x=growth, fill=LIHTC )) +
-        ggplot2::geom_density( alpha=0.4 )  +
-        ggplot2::ggtitle("MHV Growth 2000 to 2010: Recipients vs Non-Recipients")
-    )
-  )
-
-### select vars
-d.fed <- select(d.fed, mhv.00, mhv.10, p.col.edu.00, p.col.edu.10, p.unemp.00, p.unemp.10, p.black.10, p.black.00, num.nmtc, nmtc.total,num.lihtc, lihtc.total)
-
-### remove nas
-d.fed <- do.call(data.frame, lapply(d.fed, function(x) {
-  replace(x, is.infinite(x) | is.na(x), 0)
-}))
-
-
-```
 
 
 
 ```{r message=FALSE, echo=FALSE}
 #Save data to rodeo folder
 #saveRDS(d.fed, here("data/rodeo/rodeo-date-mr.rds"))
-
 ```
 
 
@@ -393,42 +141,13 @@ d.fed <- do.call(data.frame, lapply(d.fed, function(x) {
 
 ```{r message=FALSE, echo=FALSE, results='asis'}
 
-# store DV in both time periods
-y1 <- log( d.fed$mhv.00 )
-y2 <- log( d.fed$mhv.10 )
-
-# store IV in both time periods
-p.col00 <- as.numeric(log(d.fed$p.col.edu.00))
-p.col10 <- as.numeric(log(d.fed$p.col.edu.10))
-p.unemp00 <- as.numeric(log( d.fed$p.unemp.00))
-p.unemp10 <- as.numeric(log( d.fed$p.unemp.10))
-p.black00 <- as.numeric(log( d.fed$p.black.00))
-p.black10 <- as.numeric(log( d.fed$p.black.10))
-
-# create a variable that identifies if a tract received NMTC funding
-treat <- as.numeric( d.fed$num.nmtc > 0 )
-
-# add DV and IVs into one data frame per time period
-df1 <- data.frame( y=y1, treat=treat, post=0, p.col=p.col00, p.unemp = p.unemp00, p.black = p.black00)
-df2 <- data.frame( y=y2, treat=treat, post=1, p.col=p.col10, p.unemp = p.unemp10, p.black = p.black10)
-
-# stack the time periods together into one data frame
-df3 <- rbind( df1, df2 )
-data_new <- df3                                                        # Duplicate data
-data_new[is.na(data_new) | data_new == "Inf" | data_new == "-Inf"] <- NA  # Replace NaN & Inf & -Inf with NA
-
-###labels for knitting
-PercentCollegeGrad <- data_new$p.col
-PercentUnemployed <- data_new$p.unemp
-PercentBlackPopulation <- data_new$p.black
-
-m <- lm( y ~ p.col +p.unemp +p.black + treat + post + treat*post, data=data_new)
-
 # view regression results
-pander(summary( pander(summary(lm( y ~ PercentCollegeGrad +PercentUnemployed + PercentBlackPopulation + treat + post + treat*post, data=data_new))) ))
+pander(summary(pander(summary(lm( y ~ PercentCollegeGrad +PercentUnemployed + PercentBlackPopulation + treat + post + treat*post, data=data_new)))))
+
+a <- lm( y ~ p.col +p.unemp +p.black + treat + post + treat*post, data=data_new)
 
 # display model results
-stargazer::stargazer(m,
+stargazer::stargazer(a,
                      title  = "NMTC Treatment",
                      covariate.labels = c("Percent College Grads", "Percent Unemployed", "Percent Black Population"),
                      dep.var.labels = "Log Median Home Value",
@@ -444,31 +163,13 @@ stargazer::stargazer(m,
 
 ```{r message=FALSE, echo=FALSE, results='asis'}
 
-treat2 <- as.numeric( d.fed$num.lihtc > 0 )
-
-# add DV and IVs into one data frame per time period
-dl1 <- data.frame( y=y1, treat=treat2, post=0, p.col=p.col00, p.unemp = p.unemp00, p.black = p.black00)
-dl2 <- data.frame( y=y2, treat=treat2, post=1, p.col=p.col10, p.unemp = p.unemp10, p.black = p.black10)
-
-# stack the time periods together into one data frame
-dl3 <- rbind( dl1, dl2 )
-data_new_l <- dl3                                   # Duplicate data
-data_new_l[is.na(data_new_l) | data_new_l == "Inf" | data_new_l == "-Inf"] <- NA  # Replace NaN & Inf with NA
-
-
-
-m <- lm( y ~ p.col +p.unemp +p.black + treat + post + treat*post, data=data_new_l)
-
-###labels for knitting
-PercentCollegeGrad <- data_new_l$p.col
-PercentUnemployed <- data_new_l$p.unemp
-PercentBlackPopulation <- data_new_l$p.black
-
 # view regression results
 pander(summary(lm( y ~ PercentCollegeGrad +PercentUnemployed + PercentBlackPopulation + treat + post + treat*post, data=data_new_l)))
 
+b <- lm( y ~ p.col +p.unemp +p.black + treat + post + treat*post, data=data_new_l)
+
 # display model results
-stargazer::stargazer(m,
+stargazer::stargazer(b,
                      title ="LIHTC Treatment",
                      covariate.labels = c("Percent College Grads", "Percent Unemployed", "Percent Black Population"),
                      dep.var.labels = "Log Median Home Value",
@@ -482,35 +183,7 @@ stargazer::stargazer(m,
 
 
 
-```{r message=FALSE, echo=FALSE, results='asis'}
 
-# create a variable that identifies if a tract received NMTC funding
-treat_t <- as.numeric( d.fed$num.nmtc > 0 )
-
-# store the year 2000 data
-dt1 <- data.frame( y=y1, treat=treat_t, post=0 )
-# store the year 2010 data
-dt2 <- data.frame( y=y2, treat=treat_t, post=1 )
-
-# stack the two time periods together
-dt3 <- rbind( dt1, dt2 )
-
-# create a variable that identifies if a tract received NMTC funding
-treat_t1 <- as.numeric( d.fed$num.lihtc > 0 )
-
-# store the year 2000 data
-dt4 <- data.frame( y=y1, treat=treat_t1, post=0 )
-# store the year 2010 data
-dt5 <- data.frame( y=y2, treat=treat_t1, post=1 )
-
-# stack the two time periods together
-dt6 <- rbind( dt1, dt2 )
-dt7 <- rbind( dt4, dt5 )
-
-m <- lm( y ~ treat + post + treat*post, data=dt6)
-m2 <- lm( y ~ treat + post + treat*post, data=dt7)
-
-```
 
 
 
@@ -518,7 +191,10 @@ m2 <- lm( y ~ treat + post + treat*post, data=dt7)
 
 ```{r, echo=FALSE}
 # view regression results
-pander(summary( m ))
+c <- lm( y ~ treat + post + treat*post, data=dt6)
+c2 <- lm( y ~ treat + post + treat*post, data=dt7)
+
+pander(summary( c ))
 ```
 
 
@@ -526,13 +202,13 @@ pander(summary( m ))
 #### LIHTC Regression Summary
 
 ```{r, echo=FALSE}
-pander(summary(m2))
+pander(summary(c2))
 ```
 
 
 ```{r, results='asis'}
 # display model results
-stargazer::stargazer(m,m2,
+stargazer::stargazer(c,c2,
                      title  = "NMTC and LITHC Comparison",
                      dep.var.labels = "Log Median Home Value",
                      column.labels = c("NMTC", "LIHTC"),
@@ -548,13 +224,13 @@ stargazer::stargazer(m,m2,
 home1 <- 200000
 home2 <- 100000
 
-rate.of.return <- .1/(1:10)
+rate.of.return <- ( (1.1)^(1:10) )
 
 roi.1 <- home1*rate.of.return
 roi.2 <- home2*rate.of.return 
 
 plot( 1:10, roi.1, type="b", pch=19, bty="n",
-      xlab="Time", ylab="Home Value", ylim=c(0,25000) )
+      xlab="Time", ylab="Home Value", ylim=c(0,520000) )
 points( 1:10, roi.2, type="b", pch=19 )
 
 text( 5, roi.1[5]+100, "Home 1", pos=3, cex=1.5 )
@@ -564,7 +240,7 @@ log.roi.1 <- log( roi.1 )
 log.roi.2 <- log( roi.2 )
 
 plot( 1:10, log.roi.1, type="b", pch=19, bty="n",
-      xlab="Time", ylab="Home Value", main = "Logged ROI", ylim=c(0,15) )
+      xlab="Time", ylab="Home Value", main = "Logged ROI", ylim=c(0,14) )
 points( 1:10, log.roi.2, type="b", pch=19 )
 
 text( 5, log.roi.1[5], "Home 1", pos=3, cex=1.5 )
@@ -576,7 +252,9 @@ options(warn=-0)
 ### Illustrating how return-on-investment values may be altered with log. 
 
 ```{r, echo=FALSE}
-data.frame( time=1:10, value=roi.1, log.value=log.roi.1 ) %>% pander()
+data.frame( time=1:10, value=roi.1, log.value=log.roi.1 )  %>%
+  kbl() %>%
+  kable_minimal()
 ```
 
 ### True Growth Rate
@@ -602,10 +280,10 @@ log.yt2 - log.yt1
 ### The full difference in difference model. 
 
 ```{r, results='asis', echo=FALSE}
-m <- lm( y ~ treat + post + treat*post, data=dt7 )
+e <- lm( y ~ treat + post + treat*post, data=dt7 )
 
 # display model results
-stargazer(m,
+stargazer(e,
           title = "NMTC- Diff-In-Diff",
           type = S_TYPE,
           digits = 2)
@@ -679,7 +357,7 @@ pander(TR-CF)
 
 ### Reflection
 
-#### Looking at our regression models, it is obvious that some demographic variables impact our policy variables. College graduates have a significantly positive relationship with growth in median home value, while percent black population has significantly negative relationship with growth in median home value for both programs. As we know from other labs and research, the positive coefficient with percent unemployed is probably due to multicollinearity/interference from instrumental variables or missing variables. This is probably also true for the negative relationship with percent black population and median home value, as we know that black people do not cause home prices to fall. 
+#### Looking at our regression models, it is obvious that some demographic variables impact our policy variables. College graduates have a significant positive relationship with growth in median home value, while percent black population has significantly negative relationship with growth in median home value for both programs. As we know from other labs and research, the positive coefficient with percent unemployed is probably due to multicollinearity/interference from instrumental variables or missing variables. This is probably also true for the negative relationship with percent black population and median home value, as we know that black people do not cause home prices to fall. 
 
 #### Because we are depending on a diff-in-diff model, the comparison of C and T values shows that our treatment group had a higher ROI than the control group. We are asserting that the counterfactual is represented by the ROI of our control group, or the growth of 'control' ROI from time 1 to time 2. We do not have a true counterfactual, but we can assert confidence that our counterfactual, by comparison, can isolate secular trends with minimal variance from unknown factors. We are extrapolating our counterfactual is comprised of: the post growth coefficient (secular trend, C2), the intercept of our untreated group group (C1), the intercept of our treated group (T1) and the median home values post treatment within that group (T2)
 
