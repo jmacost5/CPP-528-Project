@@ -229,8 +229,7 @@ stargazer( mm1, mm2, mm3, mm4,
            add.lines = list(c("Metro Fixed Effects:", "NO", "NO","NO", "YES")) )
 ```
 
-
-
+### What are the results? Which factor was most important? Did it meet your expectations? Were there any variables that were not significant that you expected to be?
 
 ### The most important factor is percent unemployment. It has a strong correlation to median home value change, but using the fixed effects model, this correlation is decreased. There is probably missing variable bias, meaning that there is another variable that is not a part of our dataset that is causing variation that is attributed to percent unemployment but the relationship is probably not an accurate portrayal. We can look for alternative data analysis and wrangling with relative certainty that we are not simply trying to find a model to suit our wishes but one that more accurately reflects reality. If we could use more variables or look at more granular units, we could probably find a regression that is negative. 
 
