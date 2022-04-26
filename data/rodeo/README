@@ -1,9 +1,6 @@
 # RODEO
-**Data**
-Data of categorized by years 1970, 1980, 1990, 2000, 2010, the meta data, and the main csv file for the project.
-
-How to use files:
-Download the raw data and make sure to save the data so that it can be read by the program.
+This folder contains the cleaned data used in the analysis of the project.  The rodeo file contains data merged from the original data sources to evaluate the programs. 
+The steps for cleaning the data can be found under the analysis folder file titled final_utilities.
 
 **Data Dictionary**
 Category Definitions:
