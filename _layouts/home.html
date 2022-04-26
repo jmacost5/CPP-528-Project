@@ -1,7 +1,7 @@
 ---
 layout: default
 ---
-(% if site.show.exerpts and page.name == "index.html" %)
+{% if site.show_excerpts and page.name == "index.html" %}
 {% for page in paginator.posts %}
 <article>
   <header>
@@ -9,7 +9,7 @@ layout: default
     <h1><a href="{{ page.url | relative_url }}">{{ page.title }}</a></h1>
     <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: date_format }}</time>
   </header>
-{{ page.excerpt }}
+  {{ page.excerpt }}
   {% unless page.excerpt == page.content %}
   <footer><a class="ghost" href="{{ page.url | relative_url }}">read more »</a></footer>
   {% endunless %}
@@ -31,9 +31,9 @@ layout: default
   {%- assign date_format = site.date_format | default: "%B %d, %Y" -%}
   {% assign counter=counter | plus:1 %}
   <div>
-     <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: date_format }}</time>
+    <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: date_format }}</time>
     <h3><a href="{{ post.url | relative_url }}">CHAPTER {{ counter }}:  {{ post.title }}</a></h3>
   </div>
-   {% endfor %}
+  {% endfor %}
 </article>
 {% endif %}
