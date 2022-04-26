@@ -1,4 +1,1 @@
-# CPP-528-Project CSS Folder
-This folder contains the CSS files needed to style the project webpage. 
-
-
+This folder provides the css layout for all pages in the repository. 
