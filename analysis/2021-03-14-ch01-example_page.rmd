@@ -1,0 +1,77 @@
+---
+title: "This is an example page"
+subtitle: "The title above can be anything you want. However, the file name must be in this specific format: `YYYY-MM-DD-chXX-short_name.md`."
+author: "Cristian E. Nuno"
+date: "`r format(Sys.time(), '%B %d, %Y')`"
+output:
+  rmdformats::downcute:
+    self_contained: true
+    thumbnails: true
+    lightbox: true
+    gallery: false
+    highlight: tango
+    df_print: paged
+  md_document:
+    variant: gfm
+---
+
+```{r setup, include=FALSE}
+# define chunk options
+knitr::opts_chunk$set(echo = TRUE, 
+                      message = FALSE, 
+                      warning = FALSE, 
+                      eval = TRUE, 
+                      fig.width=10)
+
+# load necessary functions
+source(here::here("analysis/utilities.R"))
+```
+
+## Today's Date
+
+Today's date is `r today()`.
+
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r cars}
+summary(cars)
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+```{r airquality, echo=FALSE}
+plot(x = datasets::airquality$Ozone,
+     y = datasets::airquality$Wind)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+
+## Including regression output
+
+```{r regression, results='asis'}
+# load necessary packages ----
+library(stargazer)
+
+# load constants ----
+STARGAZER_OUTPUT_TYPE = "html"
+
+# create model ----
+first_lm <- lm(Ozone ~ Wind, data = datasets::airquality)
+
+# display model
+stargazer::stargazer(
+  first_lm,
+  type = STARGAZER_OUTPUT_TYPE,
+  title = "Table 1. Linear regression using airquality dataset to predict Ozone values using Wind values."
+)
+```
