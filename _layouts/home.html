@@ -25,14 +25,16 @@ layout: default
 {% else %}
 <article class="archive">
   {{ content }}
-  <header><h1>Table of Contents</h1></header>
+  <header>
+    <a href="https://github.com/R-Class/cpp-528-fall-2021-group-05">GitHub Repository</a>
+   <h1>Revitalizing Distressed Neighborhoods</h1></header>
   {% assign counter = 0 %}
   {% for post in site.posts reversed %}
   {%- assign date_format = site.date_format | default: "%B %d, %Y" -%}
   {% assign counter=counter | plus:1 %}
   <div>
     <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: date_format }}</time>
-    <h3><a href="{{ post.url | relative_url }}">CHAPTER {{ counter }}:  {{ post.title }}</a></h3>
+    <h3><a href="{{ post.url | relative_url }}">Chapter {{ counter }}:  {{ post.title }}</a></h3>
   </div>
   {% endfor %}
 </article>
