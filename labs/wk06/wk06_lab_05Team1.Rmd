@@ -5,6 +5,16 @@ date: '2022-04-24'
 output: html_document
 ---
 
+<<<<<<< Updated upstream
+=======
+### Introduction: 
+
+### This analysis looks at median home value change and growth under two different programs - both are tax-credit incentive based, and both strive to provide affordable housing. One program is available to non-profit and for profit entities (LIHTC), and one is for private investors (NMTC). They are also allotted slightly different parameters regarding the poverty rate in the tracts they may invest in affordable housing in. Three different variables are also added in to our models to understand how they may be influencing median home value change between 2000 and 2010. The variables are: percent college graduates, percent unemployment, and percent Black population. 
+
+### TLDR: Exploring neighborhood change through the inclusion of federal program data. Using the difference-in-difference framework to estimate the impact of the NMTC and LIHTC federal programs and determine if the programs are effective at catalyzing neighborhood improvement. 
+
+
+>>>>>>> Stashed changes
 ```{r setup, include=FALSE, echo=FALSE, fig.align='center', error=FALSE}
 knitr::opts_chunk$set(echo = FALSE, message = FALSE)
 ```
@@ -44,6 +54,7 @@ source(here::here("labs/wk06/lab_06_source.R"))
 
 ### Descriptive Statistics
 
+### A section of the dataset we'll be working with
 
 ```{r message=FALSE, results='asis'}
 
@@ -54,7 +65,7 @@ pander(data.table::data.table(d[1,1:15]))
 
 
 
-
+### Home values change and growth - summary statistics
 
 
 ```{r, results='asis'}
@@ -67,24 +78,42 @@ stargazer::stargazer( d,
 ```
 
 
+### Comparing the two different programs - NMTC and LIHTC. 
 
+### First we will look at how the two programs differ in poverty rates of the tracts selected for investment. 
 
+<<<<<<< Updated upstream
 
 ```{r message=FALSE, echo=FALSE}
+=======
+```{r}
+>>>>>>> Stashed changes
 ### POVERTY RATES
 gridExtra::grid.arrange( PLOTS$pov_rate_2000$nmtc, 
                          PLOTS$pov_rate_2000$lihtc, 
                          nrow = 1 )
 ```
 
+<<<<<<< Updated upstream
 ```{r message=FALSE, echo=FALSE}
+=======
+### Next we will look at median home values.
+
+```{r message=FALSE, echo=FALSE, message=FALSE}
+>>>>>>> Stashed changes
 ### HOME VALUES
 gridExtra::grid.arrange( PLOTS$mhv_2000$nmtc, 
                          PLOTS$mhv_2000$lihtc, 
                          nrow = 1 )
 ```
 
+<<<<<<< Updated upstream
 ```{r message=FALSE, echo=FALSE}
+=======
+### And finally median home value growth.
+
+```{r message=FALSE, echo=FALSE, message=FALSE, warning=FALSE}
+>>>>>>> Stashed changes
 ### MHV Growth Rates (DV in Model)
 gridExtra::grid.arrange( PLOTS$mhv_growth$lihtc, 
                          PLOTS$mhv_growth$nmtc, 
@@ -354,7 +383,7 @@ d.fed <- do.call(data.frame, lapply(d.fed, function(x) {
 
 ### **Difference-in-Difference Model**
 
-#### The difference-in-difference estimate seems like the most robust option since it allows for pre-treatment differences as long as the parallel lines assumption is met. That is to say, the rates of growth for the treated and untreated tracts were similar in the period 1990 to 2000. Which is another way of saying we believe that C2-C1 is a good approximation of what the home value change would have been without the program.
+#### The difference-in-difference estimate seems like the most robust option for our analysis. It allows for pre-treatment differences as long as the parallel lines assumption is met. That is to say, the rates of growth for the treated and untreated tracts were similar in the period 1990 to 2000. Which is another way of saying we believe that C2-C1 is a good approximation of what the home value change would have been without the program. To satisfy the requirements for this model, lets look at how our two programs compare. 
 
 
 
@@ -486,6 +515,7 @@ m2 <- lm( y ~ treat + post + treat*post, data=dt7)
 
 
 #### NMTC Regression Summary 
+
 ```{r, echo=FALSE}
 # view regression results
 pander(summary( m ))
@@ -494,6 +524,7 @@ pander(summary( m ))
 
 
 #### LIHTC Regression Summary
+
 ```{r, echo=FALSE}
 pander(summary(m2))
 ```
@@ -510,7 +541,7 @@ stargazer::stargazer(m,m2,
 ```
 
 
-### Home value test
+### Home value test - illustrating how logged variables may have similarities - and thus can be used for a difference in difference approach.
 
 
 ```{r message=FALSE, echo=FALSE}
@@ -542,6 +573,8 @@ text( 5, log.roi.2[5], "Home 2", pos=3, cex=1.5 )
 options(warn=-0)
 ```
 
+### Illustrating how return-on-investment values may be altered with log. 
+
 ```{r, echo=FALSE}
 data.frame( time=1:10, value=roi.1, log.value=log.roi.1 ) %>% pander()
 ```
@@ -566,6 +599,7 @@ log.yt2 <- log.roi.2[2]
 log.yt2 - log.yt1
 ```
 
+### The full difference in difference model. 
 
 ```{r, results='asis', echo=FALSE}
 m <- lm( y ~ treat + post + treat*post, data=dt7 )
