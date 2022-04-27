@@ -31,4 +31,4 @@ naivgation:
  
 show_downloads: true
 google_analytics:
-theme: jekyll-theme-time-machine
+theme: jekyll-theme-minimal
