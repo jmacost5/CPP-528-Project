@@ -16,7 +16,11 @@ minimal_theme: true          # radically minimalistic theme
 
 navigation:                  # show navigation links in the header	
   - index.md  # Landing page with Table of Contents
-  - exec.md 
+  - exec.md # Executive Summary
+  - 2022-04-25-ch-02-mhv.md #Neighborhood Change
+  - #Evolution of Tax Credits
+  - #Results and Conclustions
+  - #About Tab
 
 icons:                       # show icons in the header, for all possible icons see http://fontawesome.io/icons/
   # envelope: "mailto:niklasbuschmann@users.noreply.github.com"
