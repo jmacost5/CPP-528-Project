@@ -6,7 +6,7 @@ title: "Table of Contents"
 
 Please view these pages if images do not show in the original document
 
-Chapter 01: [Executive Summary](https://github.com/jmacost5/CPP-528-Project/blob/main/_posts/2022-04-24-ch01-execsum.md) <br>
-Chapter 02: [Introduction & Research Question](https://github.com/jmacost5/CPP-528-Project/blob/main/_posts/2022-04-25-2_intro.md) <br>
-Chapter 03: [Neighborhood Characteristics](https://github.com/jmacost5/CPP-528-Project/blob/main/_posts/2022-04-26_3_mhv.md)<br>
-Chapter 04: [Evaluation of Tax Credit Programs](https://github.com/jmacost5/CPP-528-Project/blob/main/_posts/2022-05-03-5_evaltxcred.md)
+Chapter 01: [Executive Summary](https://jmacost5.github.io/CPP-528-Project/analysis/1.Executive_Summary.md) <br>
+Chapter 02: [Introduction & Research Question](https://jmacost5.github.io/CPP-528-Project/analysis/2.Part_I_ Neighborhood _Change.md) <br>
+Chapter 03: [Neighborhood Characteristics](https://jmacost5.github.io/CPP-528-Project/analysis/3.Part_II_ Evaluation_of_Tax_Credits.md)<br>
+Chapter 04: [Evaluation of Tax Credit Programs](https://jmacost5.github.io/CPP-528-Project/analysis/4.Part_III_Results_and_Conclusion.md)
