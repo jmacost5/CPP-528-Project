@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "Alternate Chapters"
+title: "Table of Contents"
 
 ---
 
