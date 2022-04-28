@@ -1,5 +1,5 @@
 ---
-layout: Home
+layout: home
 title: "Table of Contents"
 ---
 ## Introduction & Research Question
