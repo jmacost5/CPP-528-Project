@@ -11,7 +11,7 @@ Thanks to the renv package, you can install the necessary R packages by running 
     renv::restore(here::here())
 
 **Navigation:**
-Each sub-folder in this directory will have a separate README with information on the contents of the folder and any background information needed. The main code written for the project is located in the "labs" folder. 
+Each sub-folder in this directory will have a separate README with information on the contents of the folder and any background information needed. The main code written for the project is located in the "labs" folder here: https://github.com/jmacost5/CPP-528-Project/tree/main/labs. 
 
 **Contact information:**
 * Jestrii Acosta jmacost5@asu.edu
