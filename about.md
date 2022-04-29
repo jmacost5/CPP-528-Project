@@ -4,28 +4,28 @@ title: About Us
 subtitle: Meet the Designers of this project
 team:
   - name: Jestrii Acosta
-    img: ../assets/img/about/alev_img.JPG
-    desc: The one who gets to write the descriptions.  Expected Break Out Date: August 2022!
+    #img: ..images/about/
+    desc: The one who gets to write the descriptions and never creates pull request because it takes too long.  Expected Break Out Date: August 2022!
     asu email: jmacost5@asu.edu
     email: jestrii@jjacosta.com
     github: https://github.com/jmacost5
   - name: Megan Rowland
-    img: ../assets/img/about/alev_img.JPG
+    #img: ..images/about/
     desc: The Team Captin that is able to manage everything related to the project
     email: merowla1@asu.edu
     github: https://github.com/mrowland1
   - name: Kara Brick
-    img: ../assets/img/about/Kara.jpeg
+    img: ..images/about/Kara.jpeg
     desc:  The President and the big brains of the whole operation. Expected Break Out Date: August 2022!
     email: karabrick@gmail.com
     github: https://github.com/krbrick
   - name: Mariam Mohamad
-    img: ../assets/img/about/Mariam.jfif
+    img: ..images/about/Mariam.jfif
     desc:  The Woman Boss that literally manages everything on a whole other time line. Expected Break Out Date: December 2022!
     email: mgmahmou@asu.edu
     github: https://github.com/Ma112120
   - name: Rached Fares
-    img: ../assets/img/about/Rached.jpg
+    img: ..images/about/Rached.jpg
     desc:  The only guy in the group who deals with all of us
     email: rfares1@asu.edu
     github: https://github.com/Rached-ASU
