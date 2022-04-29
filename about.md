@@ -21,7 +21,7 @@ team:
     github: https://github.com/krbrick
   - name: Mariam Mohamad
     img: ../assets/img/about/Mariam.jfif
-    desc:  The Woman Boss that literally manages everything on a whole other time line
+    desc:  The Woman Boss that literally manages everything on a whole other time line. Expected Break Out Date: December 2022!
     email: mgmahmou@asu.edu
     github: https://github.com/Ma112120
   - name: Rached Fares
