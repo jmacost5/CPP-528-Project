@@ -5,7 +5,7 @@ subtitle: Meet the Designers of this project
 team:
   - name: Jestrii Acosta
     img: ../assets/img/about/alev_img.JPG
-    desc: The one who gets to write the descriptions
+    desc: The one who gets to write the descriptions.  Expected Break Out Date: August 2022!
     asu email: jmacost5@asu.edu
     email: jestrii@jjacosta.com
     github: https://github.com/jmacost5
@@ -16,7 +16,7 @@ team:
     github: https://github.com/mrowland1
   - name: Kara Brick
     img: ../assets/img/about/Kara.jpeg
-    desc:  The President and the big brains of the whole operation
+    desc:  The President and the big brains of the whole operation. Expected Break Out Date: August 2022!
     email: karabrick@gmail.com
     github: https://github.com/krbrick
   - name: Mariam Mohamad
