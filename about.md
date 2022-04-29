@@ -4,13 +4,13 @@ title: About Us
 subtitle: Meet the Designers of this project
 team:
   - name: Jestrii Acosta
-    #img: ..images/about/
+    img: ..images/about/
     desc: The one who gets to write the descriptions and never creates pull request because it takes too long.  Expected Break Out Date: August 2022!
     asu email: jmacost5@asu.edu
     email: jestrii@jjacosta.com
     github: https://github.com/jmacost5
   - name: Megan Rowland
-    #img: ..images/about/
+    img: ..images/about/
     desc: The Team Captin that is able to manage everything related to the project
     email: merowla1@asu.edu
     github: https://github.com/mrowland1
