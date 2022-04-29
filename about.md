@@ -26,7 +26,7 @@ team:
     github: https://github.com/Ma112120
   - name: Rached Fares
     img: ../assets/img/about/Rached.jpg
-    desc:  The only Boy who deals with all of us
+    desc:  The only guy in the group who deals with all of us
     email: rfares1@asu.edu
     github: https://github.com/Rached-ASU
     
