@@ -15,17 +15,17 @@ team:
     email: merowla1@asu.edu
     github: https://github.com/mrowland1
   - name: Kara Brick
-    img: ../assets/img/about/alev_img.JPG
+    img: ../assets/img/about/Kara.jpeg
     desc:  The President and the big brains of the whole operation
     email: karabrick@gmail.com
     github: https://github.com/krbrick
   - name: Mariam Mohamad
-    img: ../assets/img/about/alev_img.JPG
+    img: ../assets/img/about/Mariam.jfif
     desc:  The Woman Boss that literally manages everything on a whole other time line
     email: mgmahmou@asu.edu
     github: https://github.com/Ma112120
   - name: Rached Fares
-    img: ../assets/img/about/alev_img.JPG
+    img: ../assets/img/about/Rached.jpg
     desc:  The only Boy who deals with all of us
     email: rfares1@asu.edu
     github: https://github.com/Rached-ASU
