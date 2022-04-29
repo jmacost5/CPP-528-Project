@@ -3,25 +3,48 @@ layout: page
 title: About Us
 subtitle: Meet the Designers of this project
 team:
+  - name: Jestrii Acosta
+    img: ../assets/img/about/alev_img.JPG
+    desc: The one who gets to write the descriptions
+    asu email: jmacost5@asu.edu
+    email: jestrii@jjacosta.com
+    github: https://github.com/jmacost5
   - name: Megan Rowland
-    desc: write short description
-    email: email
-    github: https://github.com/
+    img: ../assets/img/about/alev_img.JPG
+    desc: The Team Captin that is able to manage everything related to the project
+    email: merowla1@asu.edu
+    github: https://github.com/mrowland1
   - name: Kara Brick
-    desc:  write short description
-    email: email
-    github: https://github.com/
+    img: ../assets/img/about/alev_img.JPG
+    desc:  The President and the big brains of the whole operation
+    email: karabrick@gmail.com
+    github: https://github.com/krbrick
   - name: Mariam Mohamad
-    desc:  write short description
-    email: email
-    github: https://github.com/
+    img: ../assets/img/about/alev_img.JPG
+    desc:  The Woman Boss that literally manages everything on a whole other time line
+    email: mgmahmou@asu.edu
+    github: https://github.com/Ma112120
   - name: Rached Fares
-    desc:  write short description
-    email: email
-    github: https://github.com/
+    img: ../assets/img/about/alev_img.JPG
+    desc:  The only Boy who deals with all of us
+    email: rfares1@asu.edu
+    github: https://github.com/Rached-ASU
     
 ---
 
+## Meet the team
+
+These people worked together to create this website.
+
+{% include list-circles.html items=page.team %}
+
+## Website design source
+
+The Jekyll website design was adapted from Niklas Buschmann's [contrast theme](https://github.com/niklasbuschmann/contrast).
+
+## GitHub Repo
+
+You can find the source code that powers this website [on this GitHub repo](https://github.com/R-Class/cpp-528-template).
 
 <!--- CSS for Circles --->
 
