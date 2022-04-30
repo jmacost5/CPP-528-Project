@@ -1,6 +1,6 @@
 # CPP-528-Project
 **Building a Neighborhood Change Database:**
-In this project we are ultimately interested in building models to explain neighborhood change between 1990 and 2010. Census data is central to this analysis, using the harmonized Longitudinal Tracts Data Base. We have selected variables that we thought were potential indicators of gentrification, tested these variables, and also included federal program models. 
+In this project we built models to explain neighborhood change between 1990 and 2010. Census data is integral to this analysis, using the harmonized Longitudinal Tracts Data Base. We have selected variables that we thought were potential indicators of gentrification, tested these variables, and also included federal program models. 
 
 **Website:**
 https://jmacost5.github.io/CPP-528-Project/
