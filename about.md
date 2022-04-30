@@ -2,27 +2,31 @@
 title: About
 subtitle: The team behind this project
 team:
-  - name: Sean Harrington
-    img: ../assets/img/about/SEAN (C) small.jpg
-    #assets/img/about/romi_and_phoebe.jpg
-    desc: Lover of books and friend of dogs.
-    url: https://www.aspca.org/adopt-pet/adoptable-dogs-your-local-shelter
-    website: https://isearch.asu.edu/node/347427
-    github: https://github.com/Sean-In-The-Library
-    twitter: https://twitter.com/SeanLovesBooks
-  - name: Melissa Millican
-    img: ../assets/img/about/Melissa.jpg
-    desc: Enjoys the outdoors, reading, and tennis.
-    github:  https://github.com/millmeli42
-  - name: Joseph Papczynski
-    img: ../assets/img/about/Joe.JPG
-    desc: Not a great programmer but gets the job done. I enjoy being outdoors fishing, playing sports, or just enjoying the sunshine.
-    github: https://github.com/jpapczyn
-  - name: Amy T. Trumpower
-    img: ../assets/img/about/amy.jpg
-    desc: Loves National Parks, true crime podcasts, and her four-legged kids.
-    github: https://github.com/amytrumpower
-    envelope: "mailto:attrumpo@asu.edu"
+  - name: Jestrii Acosta
+    img: ../assets/img/about/Kara.jpeg
+    desc: The one who gets to write the descriptions and never creates pull requests because it takes too long.  Expected Break Out Date: August 2022!
+    email: jestrii@jjacosta.com
+    github: https://github.com/jmacost5
+  - name: Megan Rowland
+    img: ../assets/img/about/Kara.jpeg
+    desc: The Team Captin that is able to manage everything related to the project
+    email: merowla1@asu.edu
+    github: https://github.com/mrowland1
+  - name: Kara Brick
+    img: ../assets/img/about/Kara.jpeg
+    desc:  The President and the big brains of the whole operation. Expected Break Out Date: August 2022!
+    email: karabrick@gmail.com
+    github: https://github.com/krbrick
+   - name: Mariam Mohamad
+    img: ../assets/img/about/Mariam.jfif
+    desc:  The Woman Boss that literally manages everything on a whole other time line. Expected Break Out Date: December 2022!
+    email: mgmahmou@asu.edu
+    github: https://github.com/Ma112120
+  - name: Rached Fares
+    img: ../assets/img/about/Rached.jpg
+    desc:  The Only Guy in the group who deals with all of us
+    email: rfares1@asu.edu
+    github: https://github.com/Rached-ASU
    
 theme: minimal
 ---
