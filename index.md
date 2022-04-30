@@ -1,6 +1,6 @@
 ---
 layout: home
-title: "Table of Contents"
+
 ---
 ## Introduction & Research Question
 The research question presented was if two federal tax programs motivated positive growth to revitalize neighborhoods between the years of 2000-2010. The two programs analyzed were: Low Income Housing Tax Credits (LIHTC) and New Market Tax Credits (NMTC).
