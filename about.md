@@ -4,7 +4,7 @@ subtitle: The team behind this project
 team:
   - name: Jestrii Acosta
     img: ../assets/img/about/Kara.jpeg
-    desc: The one who gets to write the descriptions and never creates pull requests because it takes too long.  Expected Break Out Date: August 2022!
+    desc: The one who gets to write the descriptions
     email: jestrii@jjacosta.com
     github: https://github.com/jmacost5
   - name: Megan Rowland
@@ -14,12 +14,12 @@ team:
     github: https://github.com/mrowland1
   - name: Kara Brick
     img: ../assets/img/about/Kara.jpeg
-    desc:  The President and the big brains of the whole operation. Expected Break Out Date: August 2022!
+    desc:  The President and the big brains of the whole operation
     email: karabrick@gmail.com
     github: https://github.com/krbrick
    - name: Mariam Mohamad
     img: ../assets/img/about/Mariam.jfif
-    desc:  The Woman Boss that literally manages everything on a whole other time line. Expected Break Out Date: December 2022!
+    desc:  The Woman Boss that literally manages everything on a whole other time line
     email: mgmahmou@asu.edu
     github: https://github.com/Ma112120
   - name: Rached Fares
