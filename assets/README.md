@@ -23,6 +23,7 @@ This folder stores all diffrent fonds used within the website
 KaTeX is a fast, easy-to-use JavaScript library for TeX math rendering
 on the web.
 
-## YAML This directory will store all .yaml files that provide both the
+## YAML 
+This directory will store all .yaml files that provide both the
 title and subtitle for each chapter located within the ~/\_posts/
 directory.
