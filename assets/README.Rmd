@@ -1,0 +1,7 @@
+Assets
+
+Assets folder contains everything related to the project design and layout. 
+
+Here you can find all the background pictures, images, fonts, formulas layouts used within this project in their specific folders.
+
+
