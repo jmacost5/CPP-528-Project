@@ -1,5 +1,4 @@
 ---
-layout: page
 title: About Us
 subtitle: Meet the Designers of this project
 team:
