@@ -1,4 +1,4 @@
-##Assets
+# Assets
 
 Assets folder contains everything related to the project design and layout. 
 
