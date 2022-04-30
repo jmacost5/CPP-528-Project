@@ -1,11 +1,11 @@
-Lab 05: Adding Federal Program Data
+##Lab 05: Adding Federal Program Data
 
 Used the difference-in-difference framework to estimate the impact of each federal program: the NMTC and the LIHTC.
 
-About the NMTC Program
+**About the NMTC Program**
 The NMTC Program enables economically distressed communities to leverage private investment capital by providing investors with a federal tax credit.
 
-About the LIHTC Program
+**About the LIHTC Program**
 The Low-Income Housing Tax Credit (LIHTC) is the most important resource for creating affordable housing in the United States today.
 The LIHTC database, created by HUD and available to the public since 1997, contains information on 47,511 projects and 3.13 million housing units placed in service between 1987 and 2017.
 
