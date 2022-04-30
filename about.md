@@ -9,26 +9,29 @@ team:
     github: https://github.com/jmacost5
   - name: Megan Rowland
     img: ../assets/img/about/Kara.jpeg
-    desc: The Team Captin that is able to manage everything related to the project
+    desc: The Team Captin that is able to manage 
+    everything related to the project
     email: merowla1@asu.edu
     github: https://github.com/mrowland1
   - name: Kara Brick
     img: ../assets/img/about/Kara.jpeg
-    desc:  The President and the big brains of the whole operation
+    desc:  The President and the big brains of 
+    the whole operation
     email: karabrick@gmail.com
     github: https://github.com/krbrick
    - name: Mariam Mohamad
     img: ../assets/img/about/Mariam.jfif
-    desc:  The Woman Boss that literally manages everything on a whole other time line
+    desc:  The Woman Boss that literally manages 
+    everything on a whole other time line
     email: mgmahmou@asu.edu
     github: https://github.com/Ma112120
   - name: Rached Fares
     img: ../assets/img/about/Rached.jpg
-    desc:  The Only Guy in the group who deals with all of us
+    desc:  The Only Guy in the group who deals 
+    with all of us
     email: rfares1@asu.edu
     github: https://github.com/Rached-ASU
    
-theme: minimal
 ---
 
 ## Meet the team
