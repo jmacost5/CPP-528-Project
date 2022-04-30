@@ -10,22 +10,22 @@ layouts used within this project in their specific folders.
 
 This folder provides the css layout for all pages in the repository.
 
-\#\#images
+##images
 
 This folder has images used throughout the project. This contains
 background images and images within the project.
 
-\#\#img This folder stores static images to be used within the website.
+##img This folder stores static images to be used within the website.
 
-\#\#fonts
+##fonts
 
 This folder stores all diffrent fonds used within the website
 
-\#\#katex
+##katex
 
 KaTeX is a fast, easy-to-use JavaScript library for TeX math rendering
 on the web.
 
-\#\#YAML This directory will store all .yaml files that provide both the
+##YAML This directory will store all .yaml files that provide both the
 title and subtitle for each chapter located within the ~/\_posts/
 directory.
