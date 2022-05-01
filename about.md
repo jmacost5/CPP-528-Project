@@ -4,7 +4,7 @@ subtitle: The team behind this project
 team:
   - name: Jestrii Acosta
     img: ../assets/img/about/Kara.jpeg
-    desc: The one who gets to write the descriptions
+    desc: The one who gets to write the descriptions.
     email: jestrii@jjacosta.com
     github: https://github.com/jmacost5
   - name: Megan Rowland
