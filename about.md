@@ -17,9 +17,9 @@ team:
     github: https://github.com/AhmedRashwanASU
   - name: April Peck
     img: ../assets/img/about/Aprils_Sq.jpg
-    desc: April has her BS in Public Administration and will graduate with her MS      in program Evaluation and Data Analytics in May, 2022.               
+    desc: April has her BS in Public Administration and will graduate with her MS      in program Evaluation and Data Analytics in May, 2022.           
     github: https://github.com/AprilPeck
-     - name: April Peck
+  - name: April Peck
     img: ../assets/img/about/Aprils_Sq.jpg
     desc: April has her BS in Public Administration and will graduate with her MS      in program Evaluation and Data Analytics in May, 2022.               
     github: https://github.com/AprilPeck
