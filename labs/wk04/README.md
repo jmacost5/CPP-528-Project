@@ -1,48 +1,35 @@
-# Lab 03 - Descriptive Analysis
+# Lab 02 - Data Wrangling
 
-For Part 01 of the lab, we reproduced the descriptive analysis of
-changes in median home values for periods 1990 to 2000.
+The end goal of data wrangling is for the data to be clean and easy to
+use during the analytical stage of the project. For this lab you will
+add meaningful metadata about the LTDB dataset to a machine-readable
+concordance file that will be used to greatly improve the usability of
+the data.
 
-Note that only urban tracts were used for our analysis. We tried to
-differentiate between median home value changes in time periods 1990 to
-2000 and 2000 and 2010.
+**Part 1: Data Concordance** Download the data concordance spreadsheet
+that was created from the steps described above and store it within the
+data/rodeo directory. You will see that it has all of the information
+about variable changes over time, but it has incomplete meta-data that
+describes the variables.
 
-In a previous lab, we conceptualized gentrification. We created a new
-variable in our dataset that allows us to operationalize gentrification
-and examine its prevalence in the data. We identified which census
-tracts, by our definition of tracts that would be eligible for
-gentrification. Of those, we also determined which actually became
-gentrified.
+**Part 2: Build a Variable Filter** Part of the challenge of working
+with this dataset is its size. It’s hard to keep track of dozens of
+variables at once, especially when the abbreviations are not very
+helpful and many concepts are closely related.
 
-We measured gentrification as increase in pay, decrease in family
-poverty, and decrease in percent renters in housing units.
+**ONE: Filter variables by theme or group.** Write a function that takes
+as an argument one or more of the groups that you just created in the
+concordance file under the “category” field and returns all of the
+variables associated with that group.
 
-Reasons that gentrification marker variables were chosen:
+**TWO: Create a function that searches variable descriptions for a
+specific string and returns any variables that match.**
 
-1.  Increase in pay - Median household income has been identified as a
-    change factor in gentrification. (Urban Displacement,
-    <https://github.com/DS4PS/cpp-528-spr-2020/blob/master/articles/gentrification/gentrification-methodology.pdf>)
+THREE: Create a function to filter variables by time periods.
+Specifically, the user will specify the time periods of interest for the
+study and the function will identify all variables that have measures
+for those periods.
 
-2.  Family poverty - Families with children in poverty have been
-    identified as vulnerable to gentrification (Urban Displacement,
-    <https://github.com/DS4PS/cpp-528-spr-2020/blob/master/articles/gentrification/gentrification-methodology.pdf>)
-
-3.  Decrease in percent renters - Home ownership has been identified as
-    a change factor in gentrification. (Urban Displacement,
-    <https://github.com/DS4PS/cpp-528-spr-2020/blob/master/articles/gentrification/gentrification-methodology.pdf>)
-
-Histograms and scatterplots were generated to show data arrangement
-regarding median home value.
-
-We prepared a Dorling Cartogram shapefile so that data distribution
-according to population could be visualized.
-
-**Home Values** We located high and low-value tracts located in the
-city/cities and compared values in 2000 to changes in values from
-1990-2000. We determined where the largest gains occur in tracts with
-regard to median home value.
-
-**Gentrification** We created a map that highlights tracts that are
-candidates for gentrification in 2000 and tracts that gentrify between
-1990 and 2000, and found meaningful patterns in where gentrification
-occurs (Southern areas of San Diego).
+Contains all files used in week 02 of CPP 528 Class. These files are not
+meant to be used for decision-making or final analysis. These files
+represent the project work in accomplishing the final product.
