@@ -5,10 +5,16 @@ This folder documents the process of converting raw data into the “rodeo” da
 Data steps include:
 
 -Data cleaning
+
 -Recoding
+
 -Variable transformations
+
 -Data aggregation
+
 -Merging files
+
 -Filters
+
 -Conversion from long to wide formats or vice-versa
 
