@@ -1,4 +1,4 @@
-# Lab o4 Predicting MHV Change
+# Lab 04 Predicting MHV Change
 
 This lab is designed to allow us build our baseline model of neighborhood change before adding the policy variables in the next lab.
 
@@ -10,7 +10,7 @@ Then, we created a variable that measures the growth of median home value from 2
 Cases that have a median home value less than $10,000 in 2000 and those that have growth rates above 200% were ommitted.
 
 **Part 2 - Predict MHV Change**
-Three census variables were selected as good predictors of change in MHV between 2000 and 2010.
+Three census variables were selected as good predictors of change in MHV between 2000 and 2010: percent college educated, percent Black population, and percent unemployment.
 
 Running the model while including metro-level fixed effects (cbsa name or FIPS) while making sure to check for variable skew and multicollinearity and adjust accordingly.
 
