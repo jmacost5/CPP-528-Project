@@ -1,35 +1,20 @@
-# Lab 02 - Data Wrangling
+# Lab o4 Predicting MHV Change
 
-The end goal of data wrangling is for the data to be clean and easy to
-use during the analytical stage of the project. For this lab you will
-add meaningful metadata about the LTDB dataset to a machine-readable
-concordance file that will be used to greatly improve the usability of
-the data.
+This lab is designed to allow us build our baseline model of neighborhood change before adding the policy variables in the next lab.
 
-**Part 1: Data Concordance** Download the data concordance spreadsheet
-that was created from the steps described above and store it within the
-data/rodeo directory. You will see that it has all of the information
-about variable changes over time, but it has incomplete meta-data that
-describes the variables.
+**Part 1 - Data**
+We created a dataset that includes 2000 and 2010 census variables after dropping all rural census tracts.
 
-**Part 2: Build a Variable Filter** Part of the challenge of working
-with this dataset is its size. It’s hard to keep track of dozens of
-variables at once, especially when the abbreviations are not very
-helpful and many concepts are closely related.
+Then, we created a variable that measures the growth of median home value from 2000 to 2010.
 
-**ONE: Filter variables by theme or group.** Write a function that takes
-as an argument one or more of the groups that you just created in the
-concordance file under the “category” field and returns all of the
-variables associated with that group.
+Cases that have a median home value less than $10,000 in 2000 and those that have growth rates above 200% were ommitted.
 
-**TWO: Create a function that searches variable descriptions for a
-specific string and returns any variables that match.**
+**Part 2 - Predict MHV Change**
+Three census variables were selected as good predictors of change in MHV between 2000 and 2010.
 
-THREE: Create a function to filter variables by time periods.
-Specifically, the user will specify the time periods of interest for the
-study and the function will identify all variables that have measures
-for those periods.
+Running the model while including metro-level fixed effects (cbsa name or FIPS) while making sure to check for variable skew and multicollinearity and adjust accordingly.
 
-Contains all files used in week 02 of CPP 528 Class. These files are not
-meant to be used for decision-making or final analysis. These files
-represent the project work in accomplishing the final product.
+The most important factor is percent unemployment. It has a strong correlation to median home value change, but using the fixed effects model, this correlation is decreased. There is probably missing variable bias, meaning that there is another variable that is not a part of our dataset that is causing variation that is attributed to percent unemployment but the relationship is probably not an accurate portrayal. We can look for alternative data analysis and wrangling with relative certainty that we are not simply trying to find a model to suit our wishes but one that more accurately reflects reality. If we could use more variables or look at more granular units, we could probably find a regression that is negative. 
+
+
+The college graduate relationship goes from negative in its first regression to positive in the full fixed effects model, which means that the fixed effects model accounted for variation in the intercepts by metro area, but that there is either still more to the story in terms of data analysis or that college graduates truly lower home values (student debt could be a factor). It's possible that if we look by tract we may see a different relationship of college grads to median home value.
