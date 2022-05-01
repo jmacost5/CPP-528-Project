@@ -4,28 +4,28 @@ subtitle: The humans behind this project
 team:
   - name: Jestrii Acosta
     img: ../assets/img/about/Jestrii.heic
-    desc: The one who gets to write the descriptions. She 
-          is Graduating wiuth her masters of Program Evaluation and Data           Analytics degree at ASU in Summer 2022.
+    desc: The one who gets to write the descriptions. She is Graduating with
+           her masters of Program Evaluation and Data Analytics degree           at ASU in Summer 2022.
     github: https://github.com/jmacost5
   - name: Kara Brick
     img: ../assets/img/about/Kara.jpeg
     desc: Kara will graduate with her MS in Program Evaluation and Data Analytics 
-    Summer 2021. The President and the big brains of                                 the whole operation. 
+          Summer 2021. The President and the big brains of the whole operation. 
     github: https://github.com/krbrick
   - name: Rached Fares
     img: ../assets/img/about/Rached.jpg
-    desc:  The Only Guy in the group who deals with all of us. Enrolled to 
-    masters of data analytics program at ASU   
+    desc: The Only Guy in the group who deals with all of us. Enrolled in the 
+          masters of data analytics program at ASU.   
     github: https://github.com/Rached-ASU
   - name: Mariam Mohamad
     img: ../assets/img/about/Mariam.jfif
     desc: The Woman Boss that literally manages everything on a whole other 
-    time lineand will graduate with her MS in program Evaluation                     and Data Analytics in Fall 2022.           
+          time lineand will graduate with her MS in program Evaluation           and Data Analytics in Fall 2022.           
     github: https://github.com/Ma112120
   - name: Megan Rowland
     img: ../assets/img/about/Megan.jpeg
     desc: The Team Captain that is able to manage everything related to the 
-    project and will graduate with her MS                                         in program Evaluation and Data Analytics in Fall 2022.               
+          project and will graduate with her MS           in program Evaluation and Data Analytics in Fall 2022.               
     github: https://github.com/mrowland1
 
 ---
