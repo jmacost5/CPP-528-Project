@@ -2,27 +2,31 @@
 title: About the team
 subtitle: The humans behind this project
 team:
-  - name: Alev Yildiz
-    img: ../assets/img/about/alev_img.JPG
-    desc: Alev has a BS in Political Science/Spanish and a LLM in Human Rights 
-          Law. She is currently enrolled in masters of Program Evaluation and Data           Analytics degree at ASU.
-    github: https://github.com/ayildiz84
-  - name: Erin McIntyre
-    img: ../assets/img/about/erin_about_img.jpg
-    desc: Erin has a BS in Psychology and will graduate with her MS in Program               Evaluation and Data Analytics December 2021. She is passionate about               research design, musical theatre, and teaching. 
-    github: https://github.com/ekmcintyre
-  - name: Ahmed Rashwan
-    img: ../assets/img/about/Ahmeds.jpeg
-    desc: Graduate Of Software Engineering, Enrolled to masters of data analytics            program at ASU   
-    github: https://github.com/AhmedRashwanASU
-  - name: April Peck
-    img: ../assets/img/about/Aprils_Sq.jpg
-    desc: April has her BS in Public Administration and will graduate with her MS      in program Evaluation and Data Analytics in May, 2022.           
-    github: https://github.com/AprilPeck
-  - name: April Peck
-    img: ../assets/img/about/Aprils_Sq.jpg
-    desc: April has her BS in Public Administration and will graduate with her MS      in program Evaluation and Data Analytics in May, 2022.               
-    github: https://github.com/AprilPeck
+  - name: Jestrii Acosta
+    img: ../assets/img/about/Jestrii.heic
+    desc: The one who gets to write the descriptions. She 
+          is Graduating wiuth her masters of Program Evaluation and Data           Analytics degree at ASU in Summer 2022.
+    github: https://github.com/jmacost5
+  - name: Kara Brick
+    img: ../assets/img/about/Kara.jpeg
+    desc: Kara will graduate with her MS in Program Evaluation and Data Analytics 
+    Summer 2021. The President and the big brains of                                 the whole operation. 
+    github: https://github.com/krbrick
+  - name: Rached Fares
+    img: ../assets/img/about/Rached.jpg
+    desc:  The Only Guy in the group who deals with all of us. Enrolled to 
+    masters of data analytics program at ASU   
+    github: https://github.com/Rached-ASU
+  - name: Mariam Mohamad
+    img: ../assets/img/about/Mariam.jfif
+    desc: The Woman Boss that literally manages everything on a whole other 
+    time lineand will graduate with her MS in program Evaluation                     and Data Analytics in Fall 2022.           
+    github: https://github.com/Ma112120
+  - name: Megan Rowland
+    img: ../assets/img/about/Megan.jpeg
+    desc: The Team Captain that is able to manage everything related to the 
+    project and will graduate with her MS                                         in program Evaluation and Data Analytics in Fall 2022.               
+    github: https://github.com/mrowland1
 
 ---
 
