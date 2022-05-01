@@ -3,7 +3,6 @@ layout: page
 title: "Results & Conclusion"
 ---
 
-# Results and Conclusion 
 This project aimed to build models to explain neighborhood change between 1990 and 2010. The harmonized Longitudinal Tracts Data Base was used with census data to identify potential variables as indicators of gentrification. 
 
 From 1990 to 2000 there was a 6% growth in home value on average. Our first iteration we chose gentrification post-markers as an increase in pay, decrease in families with children in poverty, and decrease in percentage renters of housing units. Through this analysis, we identified 11,538 tracts that were potentially gentrified. We noticed with our chosen city of San Diego, the higher home tracts were mostly dispersed around the outskirts of the city and the above average homes made the most gains. 
