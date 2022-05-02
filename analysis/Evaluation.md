@@ -97,7 +97,7 @@ head(d, n = c(4,10)) %>%
   kable_minimal()
 ```
 
-![](https://github.com/jmacost5/CPP-528-Project/blob/main/assets/img/2021-03-14-ch01-example_page_files/figure-gfm/DataframeExcept.png)<!-- -->
+![](https://github.com/jmacost5/CPP-528-Project/blob/2c037b110f68410646a12da281c54aa1e5071147/assets/img/2021-03-14-ch01-example_page_files/figure-gfm/DataframeExcept.png)<!-- -->
 
 
 ### Home values change and growth - summary statistics
@@ -111,7 +111,7 @@ stargazer::stargazer( df,
                       digits=0, 
                       summary.stat = c("min", "p25","median","mean","p75","max") )
 ```
-![](https://github.com/jmacost5/CPP-528-Project/blob/main/assets/images/homevalues-alldata.png)<!-- -->
+![](https://github.com/jmacost5/CPP-528-Project/blob/main/assets/img/2021-03-14-ch01-example_page_files/figure-gfm/homevalues-alldata.png?raw=true)<!-- -->
 
 ### Comparing the two different programs - NMTC and LIHTC. 
 
@@ -124,7 +124,7 @@ gridExtra::grid.arrange( PLOTS$pov_rate_2000$nmtc,
                          nrow = 1 )
 ```
 
-![](https://github.com/jmacost5/CPP-528-Project/blob/main/assets/images/PovRatePlot.png)<!-- -->
+![](https://github.com/jmacost5/CPP-528-Project/blob/main/assets/img/2021-03-14-ch01-example_page_files/figure-gfm/homevalues-alldata.png?raw=true)<!-- -->
 
 ### Next we will look at median home values.
 
