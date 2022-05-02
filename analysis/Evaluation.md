@@ -165,7 +165,7 @@ gridExtra::grid.arrange( PLOTS$mhv_growth$lihtc,
 
 ### NMTC Analysis
 
-```{r message=FALSE, echo=FALSE, results='asis'}
+```r 
 
 # view regression results
 pander(summary(pander(summary(lm( y ~ PercentCollegeGrad +PercentUnemployed + PercentBlackPopulation + treat + post + treat*post, data=data_new)))))
@@ -187,7 +187,7 @@ stargazer::stargazer(a,
 
 
 
-```{r message=FALSE, echo=FALSE, results='asis'}
+```r 
 
 # view regression results
 pander(summary(lm( y ~ PercentCollegeGrad +PercentUnemployed + PercentBlackPopulation + treat + post + treat*post, data=data_new_l)))
@@ -215,7 +215,7 @@ stargazer::stargazer(b,
 
 #### NMTC Regression Summary 
 
-```{r, echo=FALSE}
+```r 
 # view regression results
 c <- lm( y ~ treat + post + treat*post, data=dt6)
 c2 <- lm( y ~ treat + post + treat*post, data=dt7)
@@ -227,12 +227,12 @@ pander(summary( c ))
 
 #### LIHTC Regression Summary
 
-```{r, echo=FALSE}
+```r 
 pander(summary(c2))
 ```
 
 
-```{r, results='asis'}
+```r 
 # display model results
 stargazer::stargazer(c,c2,
                      title  = "NMTC and LITHC Comparison",
@@ -246,7 +246,7 @@ stargazer::stargazer(c,c2,
 ### Home value test - illustrating how logged variables may have similarities - and thus can be used for a difference in difference approach.
 
 
-```{r message=FALSE, echo=FALSE}
+```r 
 home1 <- 200000
 home2 <- 100000
 
@@ -277,7 +277,7 @@ options(warn=-0)
 
 ### Illustrating how return-on-investment values may be altered with log. 
 
-```{r, echo=FALSE}
+```r 
 data.frame( time=1:10, value=roi.1, log.value=log.roi.1 )  %>%
   kbl() %>%
   kable_minimal()
@@ -285,7 +285,7 @@ data.frame( time=1:10, value=roi.1, log.value=log.roi.1 )  %>%
 
 ### True Growth Rate
 
-```{r, echo=FALSE}
+```r 
 yt1 <- roi.1[1]
 yt2 <- roi.2[2]
 
@@ -295,7 +295,7 @@ yt2 <- roi.2[2]
 
 ### Growth Rate Approximation
 
-```{r, echo=FALSE}
+```r 
 log.yt1 <- log.roi.1[1]
 log.yt2 <- log.roi.2[2]
 
@@ -305,7 +305,7 @@ log.yt2 - log.yt1
 
 ### The full difference in difference model. 
 
-```{r, results='asis', echo=FALSE}
+```r 
 e <- lm( y ~ treat + post + treat*post, data=dt7 )
 
 # display model results
@@ -318,7 +318,7 @@ stargazer(e,
 
 #### Diff-in-diff model - equation
 
-```{r, echo=FALSE}
+```r 
 b0 <- m$coefficients[1] 
 b1 <- m$coefficients[2]
 b2 <- m$coefficients[3]
@@ -331,35 +331,35 @@ b3 <- m$coefficients[4]
 
 ### C1 = B0 
 
-```{r, echo=FALSE}
+```r 
 C1 <- b0
 pander(exp( C1 ))
 ```
 
 ### C2 = B0 + B2 
 
-```{r, echo=FALSE}
+```r 
 C2 <- b0 + b2
 pander(exp( C2 ))
 ```
 
 ### T1 = B0 + B1 
 
-```{r, echo=FALSE}
+```r 
 T1 <- b0 + b1
 pander(exp( T1 ))
 ```
 
 ### T2 = B0 + B1 + B2 + B3 
 
-```{r, echo=FALSE}
+```r 
 T2 <- b0+b1+b2+b3
 pander(exp( T2 ))
 ```
 
 ### Counterfactual: C2-C1
 
-```{r, echo=FALSE}
+```r 
 CF<- 196984 - 156581
 
 pander(CF)
@@ -367,7 +367,7 @@ pander(CF)
 
 ### Our Treatment Group: T2-T1
 
-```{r, echo=FALSE}
+```r 
 
 TR <- 166560 - 120265
 pander((TR))
@@ -376,7 +376,7 @@ pander((TR))
 
 ### Treatment difference in difference (T2-T1) - (C2-C1)
 
-```{r, echo=FALSE}
+```r 
 pander(TR-CF)
 ```
 
