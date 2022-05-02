@@ -97,7 +97,7 @@ head(d, n = c(4,10)) %>%
   kable_minimal()
 ```
 
-![](https://github.com/jmacost5/CPP-528-Project/blob/2c037b110f68410646a12da281c54aa1e5071147/assets/img/2021-03-14-ch01-example_page_files/figure-gfm/DataframeExcept.png)<!-- -->
+![](https://github.com/jmacost5/CPP-528-Project/blob/main/assets/img/2021-03-14-ch01-example_page_files/figure-gfm/DataframeExcept.png?raw=true)<!-- -->
 
 
 ### Home values change and growth - summary statistics
@@ -124,7 +124,7 @@ gridExtra::grid.arrange( PLOTS$pov_rate_2000$nmtc,
                          nrow = 1 )
 ```
 
-![](https://github.com/jmacost5/CPP-528-Project/assets/img/2021-03-14-ch01-example_page_files/figure-gfm/PovRatePlot.png)<!-- -->
+![](https://github.com/jmacost5/CPP-528-Project/blob/main/assets/img/2021-03-14-ch01-example_page_files/figure-gfm/PovRatePlot.png?raw=true)<!-- -->
 
 ### Next we will look at median home values.
 
@@ -135,7 +135,7 @@ gridExtra::grid.arrange( PLOTS$mhv_2000$nmtc,
                          nrow = 1 )
 ```
 
-![](https://github.com/jmacost5/CPP-528-Project/blob/main/assets/images/mhvPlot.png)<!-- -->
+![](https://github.com/jmacost5/CPP-528-Project/blob/main/assets/img/2021-03-14-ch01-example_page_files/figure-gfm/mhvPlot.png?raw=true)<!-- -->
 
 ### And finally median home value growth.
 
@@ -146,7 +146,7 @@ gridExtra::grid.arrange( PLOTS$mhv_growth$lihtc,
                          nrow = 1 )
 ```
 
-![](https://github.com/jmacost5/CPP-528-Project/blob/main/assets/images/mhvGrowthPlot.png)<!-- -->
+![](https://github.com/jmacost5/CPP-528-Project/blob/main/assets/img/2021-03-14-ch01-example_page_files/figure-gfm/mhvGrowthPlot.png?raw=true)<!-- -->
 
 
 ```r
@@ -181,11 +181,10 @@ stargazer::stargazer(a,
                      digits = 2)
 ```
 
+![](https://github.com/jmacost5/CPP-528-Project/blob/main/assets/img/2021-03-14-ch01-example_page_files/figure-gfm/NMTCTreatment.png?raw=true)<!-- -->
 
 
 ### LIHTC Analysis
-
-
 
 ```r 
 
@@ -203,13 +202,9 @@ stargazer::stargazer(b,
                      digits = 2)
 ```
 
-
+![](https://github.com/jmacost5/CPP-528-Project/blob/main/assets/img/2021-03-14-ch01-example_page_files/figure-gfm/LIHTCTreatment.png?raw=true)<!-- -->
 
 ### Parallel Lines Test
-
-
-
-
 
 
 
