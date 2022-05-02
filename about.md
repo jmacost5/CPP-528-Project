@@ -15,17 +15,17 @@ team:
   - name: Rached Fares
     img: ../assets/img/about/Rached.jpeg
     desc: The Only Guy in the group who deals with all of us. Enrolled in the 
-          masters of data analytics program at ASU.   
+          masters of Data Analytics program at ASU.   
     github: https://github.com/Rached-ASU
   - name: Mariam Mohamad
     img: ../assets/img/about/Mariam.jfif
     desc: The Woman Boss that literally manages everything on a whole other 
-          timeline and will graduate with her MS in program Evaluation           and Data Analytics in Fall 2022.           
+          timeline and will graduate with her MS in Program Evaluation           and Data Analytics in Fall 2022.           
     github: https://github.com/Ma112120
   - name: Megan Rowland
     img: ../assets/img/about/Megan.jpeg
     desc: The Team Captain that is able to manage everything related to the 
-          project and will graduate with her MS           in program Evaluation and Data Analytics in Fall 2022.               
+          project and will graduate with her MS           in Program Evaluation and Data Analytics in Fall 2022.               
     github: https://github.com/mrowland1
 
 ---
