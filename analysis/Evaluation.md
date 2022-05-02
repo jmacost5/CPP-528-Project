@@ -52,12 +52,8 @@ Code for the data manipulation can be found at:
 ### TLDR: Exploring neighborhood change through the inclusion of federal program data. Using the difference-in-difference framework to estimate the impact of the NMTC and LIHTC federal programs and determine if the programs are effective at catalyzing neighborhood improvement. 
 
 
-```{r setup, include=FALSE, echo=FALSE, fig.align='center', error=FALSE}
-knitr::opts_chunk$set(echo = FALSE, message = FALSE)
-```
 
-
-```{r message=FALSE, echo=FALSE, warning=FALSE, include=FALSE}
+```r
 options(warn=-1)
 # load necessary packages ----
 library( dplyr )
@@ -95,7 +91,7 @@ source(here::here("labs/wk06/lab_06_source.R"))
 
 ### A section of the dataset we'll be working with
 
-```{r message=FALSE}
+```r 
 head(d, n = c(4,10)) %>%
   kbl() %>%
   kable_minimal()
@@ -107,7 +103,7 @@ head(d, n = c(4,10)) %>%
 ### Home values change and growth - summary statistics
 
 
-```{r, results = 'asis'}
+```r
 # show summary statistics
 stargazer::stargazer( df, 
                       type=S_TYPE,
@@ -115,67 +111,59 @@ stargazer::stargazer( df,
                       digits=0, 
                       summary.stat = c("min", "p25","median","mean","p75","max") )
 ```
-
+![](https://github.com/jmacost5/CPP-528-Project/blob/main/assets/images/homevalues-alldata.png)<!-- -->
 
 ### Comparing the two different programs - NMTC and LIHTC. 
 
 ### First we will look at how the two programs differ in poverty rates of the tracts selected for investment. 
 
-```{r}
-### POVERTY RATES
+```r
+### POVERTY RATES ----
 gridExtra::grid.arrange( PLOTS$pov_rate_2000$nmtc, 
                          PLOTS$pov_rate_2000$lihtc, 
                          nrow = 1 )
 ```
 
+![](https://github.com/jmacost5/CPP-528-Project/blob/main/assets/images/PovRatePlot.png)<!-- -->
+
 ### Next we will look at median home values.
 
-```{r message=FALSE, echo=FALSE, message=FALSE}
-### HOME VALUES
+```r
+### HOME VALUES ----
 gridExtra::grid.arrange( PLOTS$mhv_2000$nmtc, 
                          PLOTS$mhv_2000$lihtc, 
                          nrow = 1 )
 ```
 
+![](https://github.com/jmacost5/CPP-528-Project/blob/main/assets/images/mhvPlot.png)<!-- -->
+
 ### And finally median home value growth.
 
-```{r message=FALSE, echo=FALSE, message=FALSE, warning=FALSE}
+```r ----
 ### MHV Growth Rates (DV in Model)
 gridExtra::grid.arrange( PLOTS$mhv_growth$lihtc, 
                          PLOTS$mhv_growth$nmtc, 
                          nrow = 1 )
 ```
 
+![](https://github.com/jmacost5/CPP-528-Project/blob/main/assets/images/mhvGrowthPlot.png)<!-- -->
 
 
-
-
-
-
-```{r message=FALSE, echo=FALSE}
+```r
 #Save data to rodeo folder
 #saveRDS(d.fed, here("data/rodeo/rodeo-date-mr.rds"))
 ```
 
-
-
-```{r message=FALSE, echo=FALSE, include=FALSE}
+```r
 #Load data set
 #readRDS(file = here("data/rodeo/rodeo-date-mr.rds"))
 ```
-
-
-
 
 ### **Difference-in-Difference Model**
 
 #### The difference-in-difference estimate seems like the most robust option for our analysis. It allows for pre-treatment differences as long as the parallel lines assumption is met. That is to say, the rates of growth for the treated and untreated tracts were similar in the period 1990 to 2000. Which is another way of saying we believe that C2-C1 is a good approximation of what the home value change would have been without the program. To satisfy the requirements for this model, lets look at how our two programs compare. 
 
-
-
 ### NMTC Analysis
-
-
 
 ```{r message=FALSE, echo=FALSE, results='asis'}
 
