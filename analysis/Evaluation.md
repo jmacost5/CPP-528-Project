@@ -204,9 +204,7 @@ stargazer::stargazer(b,
 
 ![](https://github.com/jmacost5/CPP-528-Project/blob/main/assets/img/2021-03-14-ch01-example_page_files/figure-gfm/LIHTCTreatment.png?raw=true)<!-- -->
 
-### Parallel Lines Test
-
-
+### **Parallel Lines Test**
 
 #### NMTC Regression Summary 
 
@@ -218,14 +216,14 @@ c2 <- lm( y ~ treat + post + treat*post, data=dt7)
 pander(summary( c ))
 ```
 
-
+![](https://github.com/jmacost5/CPP-528-Project/blob/main/assets/img/2021-03-14-ch01-example_page_files/figure-gfm/Regression3.png?raw=true)<!-- -->
 
 #### LIHTC Regression Summary
 
 ```r 
 pander(summary(c2))
 ```
-
+![](https://github.com/jmacost5/CPP-528-Project/blob/main/assets/img/2021-03-14-ch01-example_page_files/figure-gfm/regression4.png?raw=true)<!-- -->
 
 ```r 
 # display model results
@@ -237,9 +235,9 @@ stargazer::stargazer(c,c2,
                      digits = 2)
 ```
 
+![](https://github.com/jmacost5/CPP-528-Project/blob/main/assets/img/2021-03-14-ch01-example_page_files/figure-gfm/NMTC%20AND%20LITHC%20COMP.png?raw=true)<!-- -->
 
 ### Home value test - illustrating how logged variables may have similarities - and thus can be used for a difference in difference approach.
-
 
 ```r 
 home1 <- 200000
@@ -270,6 +268,12 @@ text( 5, log.roi.2[5], "Home 2", pos=3, cex=1.5 )
 options(warn=-0)
 ```
 
+![](https://github.com/jmacost5/CPP-528-Project/blob/main/assets/img/2021-03-14-ch01-example_page_files/figure-gfm/HomeValuesTest.png?raw=true)<!-- -->
+
+### Slopes become parallel with log:
+
+![](https://github.com/jmacost5/CPP-528-Project/blob/main/assets/img/2021-03-14-ch01-example_page_files/figure-gfm/HomeValuesLog.png?raw=true)<!-- -->
+
 ### Illustrating how return-on-investment values may be altered with log. 
 
 ```r 
@@ -277,6 +281,7 @@ data.frame( time=1:10, value=roi.1, log.value=log.roi.1 )  %>%
   kbl() %>%
   kable_minimal()
 ```
+![](https://github.com/jmacost5/CPP-528-Project/blob/main/assets/img/2021-03-14-ch01-example_page_files/figure-gfm/ROIillustration.png?raw=true)<!-- -->
 
 ### True Growth Rate
 
