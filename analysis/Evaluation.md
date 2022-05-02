@@ -336,6 +336,13 @@ C1 <- b0
 pander(exp( C1 ))
 ```
 
+-------------
+ (Intercept) 
+-------------
+   159937    
+-------------
+
+
 ### C2 = B0 + B2 
 
 ```r 
@@ -343,12 +350,24 @@ C2 <- b0 + b2
 pander(exp( C2 ))
 ```
 
+-------------
+ (Intercept) 
+-------------
+   201590    
+-------------
+
+
 ### T1 = B0 + B1 
 
 ```r 
 T1 <- b0 + b1
 pander(exp( T1 ))
 ```
+-------------
+ (Intercept) 
+-------------
+   129977    
+-------------
 
 ### T2 = B0 + B1 + B2 + B3 
 
@@ -356,6 +375,11 @@ pander(exp( T1 ))
 T2 <- b0+b1+b2+b3
 pander(exp( T2 ))
 ```
+-------------
+ (Intercept) 
+-------------
+   164796    
+-------------
 
 ### Counterfactual: C2-C1
 
@@ -364,15 +388,16 @@ CF<- 196984 - 156581
 
 pander(CF)
 ```
+_40403_
 
 ### Our Treatment Group: T2-T1
 
 ```r 
-
 TR <- 166560 - 120265
-pander((TR))
 
+pander((TR))
 ```
+_46295_
 
 ### Treatment difference in difference (T2-T1) - (C2-C1)
 
@@ -380,6 +405,7 @@ pander((TR))
 pander(TR-CF)
 ```
 
+_5892_
 
 ### Reflection
 
