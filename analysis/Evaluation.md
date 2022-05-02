@@ -97,7 +97,7 @@ head(d, n = c(4,10)) %>%
   kable_minimal()
 ```
 
-![]https://github.com/jmacost5/CPP-528-Project/blob/main/assets/img/2021-03-14-ch01-example_page_files/figure-gfm/DataframeExcept.png)<!-- -->
+![](https://github.com/jmacost5/CPP-528-Project/blob/main/assets/img/2021-03-14-ch01-example_page_files/figure-gfm/DataframeExcept.png)<!-- -->
 
 
 ### Home values change and growth - summary statistics
