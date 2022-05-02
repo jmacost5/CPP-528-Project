@@ -99,11 +99,9 @@ source(here::here("labs/wk06/lab_06_source.R"))
 head(d, n = c(4,10)) %>%
   kbl() %>%
   kable_minimal()
-
-
-
 ```
 
+![](https://github.com/jmacost5/CPP-528-Project/blob/main/assets/images/DataframeExcept.png)<!-- -->
 
 
 ### Home values change and growth - summary statistics
