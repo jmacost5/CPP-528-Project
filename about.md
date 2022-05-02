@@ -3,7 +3,7 @@ title: About the team
 subtitle: The humans behind this project
 team:
   - name: Jestrii Acosta
-    img: ../assets/img/about/Jestrii.heic
+    img: ../assets/img/about/Jestrii.jpg
     desc: The one who gets to write the descriptions. She is Graduating with
            her masters of Program Evaluation and Data Analytics degree           at ASU in Summer 2022.
     github: https://github.com/jmacost5
@@ -13,7 +13,7 @@ team:
           Summer 2021. The President and the big brains of the whole operation. 
     github: https://github.com/krbrick
   - name: Rached Fares
-    img: ../assets/img/about/Rached.jpg
+    img: ../assets/img/about/Rached.jpeg
     desc: The Only Guy in the group who deals with all of us. Enrolled in the 
           masters of data analytics program at ASU.   
     github: https://github.com/Rached-ASU
