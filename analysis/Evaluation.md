@@ -124,7 +124,7 @@ gridExtra::grid.arrange( PLOTS$pov_rate_2000$nmtc,
                          nrow = 1 )
 ```
 
-![](https://github.com/jmacost5/CPP-528-Project/blob/main/assets/img/2021-03-14-ch01-example_page_files/figure-gfm/homevalues-alldata.png?raw=true)<!-- -->
+![](https://github.com/jmacost5/CPP-528-Project/assets/img/2021-03-14-ch01-example_page_files/figure-gfm/PovRatePlot.png)<!-- -->
 
 ### Next we will look at median home values.
 
