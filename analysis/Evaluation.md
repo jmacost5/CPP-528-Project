@@ -139,8 +139,8 @@ gridExtra::grid.arrange( PLOTS$mhv_2000$nmtc,
 
 ### And finally median home value growth.
 
-```r ----
-### MHV Growth Rates (DV in Model)
+```r 
+### MHV Growth Rates (DV in Model) ----
 gridExtra::grid.arrange( PLOTS$mhv_growth$lihtc, 
                          PLOTS$mhv_growth$nmtc, 
                          nrow = 1 )
