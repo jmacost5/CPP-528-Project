@@ -102,7 +102,7 @@ set.seed(1234)
 
 pairs(measurement.1, lower.panel = panel.smooth, upper.panel = panel.cor)
 ```
-![](https://github.com/jmacost5/CPP-528-Project/blob/main/assets/img/screenshots/Unadjusted%20Variables%20Correlation%20.png)<!-- -->
+![](https://jmacost5.github.io/CPP-528-Project/assets/img/screenshots/chapter_name_on_home_page.png)<!-- -->
 
 ``` r
 measurement.2 <- select(df, Black.change, College.change, Unemp.change, MHV.Change.00.to.10) %>% na.omit ()
@@ -263,6 +263,9 @@ abline( b0.youngston, b1, col="darkorange", lwd=3 )
 
 
 ```{r, results='asis', echo=FALSE}
+
+
+
 reg.data <- d
 reg.data$mhv.growth[ d2$mhv.growth > 200 ] <- NA
 reg.data$p.col <- log10( d2$p.col + 1 )
@@ -276,6 +279,9 @@ stargazer( m1,m2, m3, m4,
            type='html', 
            digits=2,
            omit.stat = c("rsq","f") )
+           
+           
+           
 ```
 
 ![](https://github.com/jmacost5/CPP-528-Project/blob/main/assets/img/screenshots/Regression%20Table.png) 
