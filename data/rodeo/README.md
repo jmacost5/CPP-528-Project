@@ -1,4 +1,4 @@
-#### Rodeo Files
+# Rodeo Files
 
 This folder contains datasets that have been cleaned and processed, and are ready for analysis. 
 
