@@ -7,4 +7,4 @@
  * Rodeo folder has all data transformation of raw files. This folder contains datasets that have been cleaned and processed, and are ready for analysis.
 
 **Wrangling**
- * Wrangling folder documents the process of converting raw data into the “rodeo” dataset you use for your models and descriptive statistics. Data steps include:Data cleaning, Recoding, Variable transformations, Data aggregation, Merging files, Filters, Conversion from long to wide formats or vice-versa. 
+ * Wrangling folder documents the process of converting raw data into the “rodeo” dataset you use for your models and descriptive statistics. Data steps include: Data cleaning, Recoding, Variable transformations, Data aggregation, Merging files, and Filters. 
