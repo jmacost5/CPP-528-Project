@@ -17,7 +17,7 @@ team:
     desc: The Only Guy in the group who deals with all of us. Enrolled in the 
           masters of Data Analytics program at ASU.   
     github: https://github.com/Rached-ASU
-  - name: Mariam Mohmoud
+  - name: Mariam Mahmoud
     img: ../assets/img/about/Mariam.jfif
     desc: The Woman Boss that literally manages everything on a whole other 
           timeline and will graduate with her MS in Program Evaluation           and Data Analytics in Fall 2022.           
