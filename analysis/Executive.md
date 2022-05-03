@@ -29,7 +29,7 @@ gentrification as well as Low Income Housing Tax Credit (LIHTC) data, and New Ma
 
 We used a regression model to predict change in median home value from 2000 to 2010. The dependent variable in our model is the median home value. It is a good price mechanism to capture the state of a neighborhood because they “price in” all of the characteristics of the house as well as the features of the neighborhood and surrounding city, the independent variables were percentaege of unemployment, percentage of black residents and percentage of college graduates.
 
-We used the a difference-in-difference model to study the effect of Tax programs mentiioned above.
+We used the a difference-in-difference model to study the effect of Tax programs mentionned above.
 
 ## Results:
 
