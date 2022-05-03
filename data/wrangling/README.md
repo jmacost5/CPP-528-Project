@@ -4,7 +4,7 @@ Although it can be tedious at times, data wrangling is one of the most important
 
 This folder documents the process of converting raw data into the “rodeo” dataset we used for our models and descriptive statistics. 
 
-Data wrangling will include the CRISP-DM model outlines the following steps:
+Data wrangling will include the CRISP-DM model outlines the following steps: 
 
 ## Data Understanding
 
