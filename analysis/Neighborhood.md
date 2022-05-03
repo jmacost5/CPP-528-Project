@@ -254,10 +254,11 @@ abline( b0.youngston, b1, col="darkorange", lwd=3 )
 ### Regression shows mutlicolinearity in coefficient and SD for percent black. Standard deviations increased for all variables but coefficents increased for percent college graduates and percent unemployed.
 
 
+
+
+
+
 ```{r, results='asis', echo=FALSE}
-
-
-
 reg.data <- d
 reg.data$mhv.growth[ d2$mhv.growth > 200 ] <- NA
 reg.data$p.col <- log10( d2$p.col + 1 )
@@ -271,12 +272,16 @@ stargazer( m1,m2, m3, m4,
            type='html', 
            digits=2,
            omit.stat = c("rsq","f") )
-           
-           
-           
+      
 ```
 
+
+
+
 ![](https://jmacost5.github.io/CPP-528-Project/assets/img/screenshots/Regression_Table.png)<!-- -->    
+
+
+
 
 
 
@@ -285,7 +290,15 @@ stargazer( m1,m2, m3, m4,
 
 
 
+
+
+
 **Adding fixed effect**
+
+
+
+
+
 
 ```{r, results='asis', echo=FALSE}
 d.reg <- d
