@@ -272,6 +272,11 @@ stargazer( m1,m2, m3, m4,
 
 
 
+### College graduates appear to have a negative correlation to median home value change in a regression with median home value. So, we will use a fixed effects model to account for unit level bias. 
+
+
+
+
 
 ![](https://jmacost5.github.io/CPP-528-Project/assets/img/screenshots/Regression_Table.png)<!-- -->    
 
@@ -280,8 +285,7 @@ stargazer( m1,m2, m3, m4,
 
 
 
-### College graduates appear to have a negative correlation to median home value change in a regression with median home value. So, we will use a fixed effects model to account for unit level bias. 
-
+ 
 
 
 
