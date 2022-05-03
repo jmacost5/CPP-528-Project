@@ -3,7 +3,7 @@ title: Neighborhood Characteristics
 subtitle: "Predicting Median Home Value Change" 
 ---
 
-```{r setup, include=FALSE}
+```{r}
 #Load the necessary packages ----
 library(dplyr)
 library(here)
@@ -17,7 +17,7 @@ library(namespace)
 
 
 
-Today’s date is “May 2nd, 2022”
+### Today’s date is “May 2nd, 2022”
 
 ## Data Information
 
@@ -35,7 +35,7 @@ Today’s date is “May 2nd, 2022”
 
 
 
-```{r echo=TRUE, warning = FALSE, message = FALSE}
+```{r}
 #Percentage of College Graduates
 col.00 <- d$col00  
 col.10 <- d$col10
@@ -49,7 +49,7 @@ d$col.growth <- p.col.growth
 
 
 
-```{r include=FALSE}
+```{r}
 #% Unemployed 
 #d$p.unemp[ d$p.unemp > 80 & d$p.unemp <= 1 ] <- NA
 #d$p.unemp10[ d$p.unemp10 > 80 & d$unemp.00 <= 1 ] <- NA
