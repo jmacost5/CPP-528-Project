@@ -33,9 +33,11 @@ We used the a difference-in-difference model to study the effect of Tax programs
 
 ## Results:
 
-The first surprising finding of this study was that the median homevalue in many communities was lower in the tracts that had received boththe LIHTC and the NMTC.
+Our variables percent college educated, percent Black population, and percent unemployed were significant variables were significant to the model but we cannot say that they are the only or the main indicators as it is a complex formula including many variables that each have an impact on the results.
 
-Determining which variables have the most impact on gentrification is a difficult task and one that may not be used universally to apply to every neighborhood in the U.S. Our analysis showed that percent college educated, percent Black population, and percent unemployed were significant variables but likely do not capture the whole picture.
+One surprising finding of this study was that the median homevalue in many communities was lower in the tracts that had received both the LIHTC and the NMTC questionning here both the efficiency and the success factors of theses programs
+
+
 
 
 [1]Schulze Bäing A. (2014) Neighborhood Change. In: Michalos A.C. (eds) Encyclopedia of Quality of Life and Well-Being Research. Springer, Dordrecht. https://doi.org/10.1007/978-94-007-0753-5_1929
