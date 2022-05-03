@@ -10,7 +10,7 @@ team:
   - name: Kara Brick
     img: ../assets/img/about/Kara.jpeg
     desc: Kara will graduate with her MS in Program Evaluation and Data Analytics 
-          Summer 2021. The President and the big brains of the whole operation. 
+          Summer 2022. The President and the big brains of the whole operation. 
     github: https://github.com/krbrick
   - name: Rached Fares
     img: ../assets/img/about/Rached.jpeg
