@@ -2,36 +2,6 @@
 title: Neighborhood Characteristics
 subtitle: "Predicting Median Home Value Change" 
 ---
-# Neighborhood Change
-
-## Gentrification
-
-Gentrification is a complex issue. It can cause disruption in a
-community and make residents feel as though they are no longer welcome
-in areas where they have lived (for, sometimes, generations). Local
-residents frequently worry that gentrification will lead to negative
-impacts such as forced displacement, a fostering of discriminatory
-behavior by people in power, and a focus on spaces that exclude
-low-income individuals and people of color.[1]
-
-Gentrification has increased over the last few decades.[2] High-income
-and college-educated individuals increasingly have chosen to relocate to
-dense, urban neighborhoods. Increased attention has led to an increase
-in data-driven studies to understand this issue and help protect the
-original residents. The byproduct has been more studies showing the
-complicated nature of this problem and studies that show positive
-outcomes for some communities going through this change. This
-gentrification process reverses decades of urban decline and could bring
-broad new benefits to cities through a growing tax base, increased
-socioeconomic integration, and improved amenities (Vigdor 2002; Diamond
-2016). Moreover, a large neighborhood effects literature shows that
-exposure to higher-income neighborhoods has important benefits for
-low-income residents, such as improving the mental and physical health
-of adults and increasing the long-term educational attainment and
-earnings of children (Kling et al. 2007; Ludwig et al. 2012; Chetty et
-al. 2016; Chetty and Hendren 2018a,b; Chyn 2018). Gentrification thus
-has the potential to dramatically reshape the geography of opportunity
-in American cities.[3]
 
 
 ``` r
@@ -358,12 +328,5 @@ The most important factor is percent unemployment. It has a strong correlation t
 The college graduate relationship goes from negative in its first regression to positive in the full fixed effects model, which means that the fixed effects model accounted for variation in the intercepts by metro area, but that there is either still more to the story in terms of data analysis or that college graduates truly lower home values (student debt could be a factor). It’s possible that if we look by tract we may see a different relationship of college grads to median home value.
 
 
-[1] Chong, E. (2017). Examining the negative impacts of gentrification.
-Georgetown Journal on Poverty Law & Policy.
 
-[2] Rucks-Ahidiana, Z. (2021). Racial composition and trajectories of
-gentrification in the United States. Urban Studies, 58(13), 2721-2741.
-
-[3] Brummet, Q., & Reed, D. (2019). The effects of gentrification on the
-well-being and opportunity of original resident adults and children.
 
