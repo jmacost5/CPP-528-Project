@@ -3,9 +3,7 @@ layout: page
 title: "Table of Contents"
 ---
 ## Introduction & Research Question
-The research question presented was if two federal tax programs motivated positive growth to revitalize neighborhoods between the years of 2000-2010. The two programs analyzed were: Low Income Housing Tax Credits (LIHTC) and New Market Tax Credits (NMTC).
-
-This paper leverages census data to determine the neighborhood change in three cities - using median home value as the dependent variable. Researchers then combined three census variables (vacancy rates, change in unemployment rates, and change in household income) to develop an indicator of increased gentrification within the same neighborhoods. The purpose of the gentrification variables is to contextualize rises in median home value to avoid the pitfalls of hedonic housing models. Leveraging these two indicators, researchers conducted an analysis of three cities to determine if positive growth occurred as a result of these tax programs.
+This report discusses possible influences of neighborhood change through the use of census data. The variables chosen for the analysis as indicators of gentrification were percent college educated, percent Black population, and percent unemployed. Low Income Housing Tax Credits (LIHTC) and New Market Tax Credits (NMTC) models were used to assess the impact of federal programs on positive neighborhood growth. 
 
 ## 1. Executive Summary
 
