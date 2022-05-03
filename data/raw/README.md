@@ -1,4 +1,4 @@
-#Raw Files
+# Raw Files
 
 All of the raw data files will go in the raw folder. By “raw” we mean the data as it arrived from whatever site we retrieved it from, or the file exactly how it was exported from a custom data collection tool like an online survey program.
 
