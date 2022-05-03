@@ -115,6 +115,6 @@ This paper leverages census data to determine the neighborhood change in three c
   
   
   
-## 4. Part III – Results and Conclusions
+## 4. Part III – Results and Conclusion
 
 
