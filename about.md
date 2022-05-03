@@ -20,7 +20,7 @@ team:
   - name: Mariam Mahmoud
     img: ../assets/img/about/Mariam.jfif
     desc: The Woman Boss that literally manages everything on a whole other 
-          timeline and will graduate with her MS in Program Evaluation           and Data Analytics in Fall 2022.           
+          timeline, and she will graduate with her MS in Program Evaluation           and Data Analytics in Fall 2022.           
     github: https://github.com/Ma112120
   - name: Megan Rowland
     img: ../assets/img/about/Megan.jpeg
