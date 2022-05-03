@@ -9,7 +9,7 @@ title: Executive Summary
 
 ## Overview & Research Question:
 
-In this project we are ultimately interested in building models to explain neighborhood change between 1990 and 2010 in the United States of America Neighborhood change is a term to describe processes of physical and socioeconomic change within and in-between neighborhoods.*
+In this project we are ultimately interested in building models to explain neighborhood change between 1990 and 2010 in the United States of America Neighborhood change is a term to describe processes of physical and socioeconomic change within and in-between neighborhoods.[a]
 
 The research question presented was if two federal tax programs motivated positive growth to revitalize neighborhoods between the yearsof 2000-2010. 
 The two programs analyzed were:
@@ -115,9 +115,9 @@ the tax programs are having their intended effect - so that we do not
 myopically focus on median home value to the exclusion of other
 attributes.
 
-[1] Schulze Bäing A. (2014) Neighborhood Change. In: Michalos A.C. (eds) Encyclopedia of Quality of Life and Well-Being Research. Springer, Dordrecht. https://doi.org/10.1007/978-94-007-0753-5_1929
+[a]Schulze Bäing A. (2014) Neighborhood Change. In: Michalos A.C. (eds) Encyclopedia of Quality of Life and Well-Being Research. Springer, Dordrecht. https://doi.org/10.1007/978-94-007-0753-5_1929
 
- What is the Low-Income Housing Tax Credit and how does it work?. Tax
+[1] What is the Low-Income Housing Tax Credit and how does it work?. Tax
 Policy Center. Retrieved November 19, 2021, from
 <https://www.taxpolicycenter.org/briefing-book/what-low-income-housing-tax-credit-and-how-does-it-work>
 
