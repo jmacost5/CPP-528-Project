@@ -7,7 +7,7 @@ title: Executive Summary
 
 # Executive Summary
 
-## Overview & Research Question:
+## Overview & Research Questions:
 
 In this project we are ultimately interested in building models to explain neighborhood change between 1990 and 2010 in the United States of America Neighborhood change is a term to describe processes of physical and socioeconomic change within and in-between neighborhoods.[a]
 
