@@ -12,10 +12,13 @@ title: Executive Summary
 In this project we are ultimately interested in building models to explain neighborhood change between 1990 and 2010 in the United States of America Neighborhood change is a term to describe processes of physical and socioeconomic change within and in-between neighborhoods.*
 
 The research question presented was if two federal tax programs motivated positive growth to revitalize neighborhoods between the yearsof 2000-2010. 
-The two programs analyzed were: Low Income Housing Tax Credits
+The two programs analyzed were:
+
+Low Income Housing Tax Credits
 
 [(LIHTC)](https://www.taxpolicycenter.org/briefing-book/what-low-income-housing-tax-credit-and-how-does-it-work)
 and New Market Tax Credits
+
 [(NMTC)](https://www.novoco.com/resource-centers/new-markets-tax-credits/nmtc-basics/new-markets-tax-credit-program-summary).
 
 ## Data:
