@@ -1,12 +1,14 @@
 # CPP-528-Project Wrangling Folder Contents
 
-Although it can be tedious at times, data wrangling is one of the most important stages of the project because it will be where you spend mosg of your time on most projects, and it is the easiest place to introduce errors that are hard to find and can have a big effect on your final results.
+Although it can be tedious at times, data wrangling is one of the most important stages of the project because it will be where you spend most of your time on most projects, and it is the easiest place to introduce errors that are hard to find and can have a big effect on your final results.
+
+This folder documents the process of converting raw data into the “rodeo” dataset we used for our models and descriptive statistics. 
 
 Data wrangling will include the CRISP-DM model outlines the following steps:
 
 ## Data Understanding
 
-The second stage consists of collecting and exploring the input dataset. The set goal might be unsolvable using the input data, you might need to use public datasets, or even create a specific one for the set goal.
+The second stage consists of collecting and exploring the input dataset. 
 
 Collect Initial Data
 
@@ -25,8 +27,6 @@ Verify Data Quality
 Data Quality Report
 
 ## Data Preparation
-
-As we all know, bad input inevitably leads to bad output. Therefore no matter what you do in modeling — if you made major mistakes while preparing the data — you will end up returning to this stage and doing it over again.
 
 Select Data
 
@@ -52,7 +52,6 @@ Reformatted Data
 
 Dataset Description
 
-This folder documents the process of converting raw data into the “rodeo” dataset you use for our models and descriptive statistics. 
 
 
 
