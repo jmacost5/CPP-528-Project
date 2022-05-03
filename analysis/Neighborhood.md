@@ -252,6 +252,42 @@ abline( b0.youngston, b1, col="darkorange", lwd=3 )
            
 ### Regression shows mutlicolinearity in coefficient and SD for percent black. Standard deviations increased for all variables but coefficents increased for percent college graduates and percent unemployed.
 
+ ```{r , echo=FALSE}
+reg.data <- d
+reg.data$mhv.growth[ d2$mhv.growth > 200 ] <- NA
+reg.data$p.col <- log10( d2$p.col + 1 )
+reg.data$p.black <- log10( d2$p.black+ 1 )
+reg.data$p.unemp <- log10( d2$p.unemp  + 1  )
+m1 <- lm( mhv.growth ~  p.black, data=reg.data )
+m2 <- lm( mhv.growth ~  p.col, data=reg.data )
+m3 <- lm( mhv.growth ~  p.unemp, data=reg.data )
+m4 <- lm( mhv.growth ~ p.black+p.col+p.unemp  , data=reg.data )
+stargazer( m1,m2, m3, m4, 
+           type='html', 
+           digits=2,
+           omit.stat = c("rsq","f") )
+      
+```
+
+
+
+
+![](https://jmacost5.github.io/CPP-528-Project/assets/img/screenshots/Regression_Table.png)<!-- -->    
+
+
+
+
+
+
+### College graduates appear to have a negative correlation to median home value change in a regression with median home value. So, we will use a fixed effects model to account for unit level bias. 
+
+
+
+
+
+
+
+**Adding fixed effect**
 
 
 ```{r, results='asis', echo=FALSE}
