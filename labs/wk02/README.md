@@ -26,7 +26,7 @@ variables associated with that group.
 **TWO: Created a function that searches variable descriptions for a
 specific string and returns any variables that match.**
 
-**THREE: Created a function to filter variables by time periods.
+**THREE: Created a function to filter variables by time periods.**
 Specifically, the user will specify the time periods of interest for the
 study and the function will identify all variables that have measures
 for those periods.
