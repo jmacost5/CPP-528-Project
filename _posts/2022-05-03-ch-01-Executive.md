@@ -14,16 +14,13 @@ In this project we are ultimately interested in building models to explain neigh
 The research question presented was if two federal tax programs motivated positive growth to revitalize neighborhoods between the yearsof 2000-2010. 
 The two programs analyzed were:
 
-Low Income Housing Tax Credits
+Low Income Housing Tax Credits [(LIHTC)](https://www.taxpolicycenter.org/briefing-book/what-low-income-housing-tax-credit-and-how-does-it-work)
 
-[(LIHTC)](https://www.taxpolicycenter.org/briefing-book/what-low-income-housing-tax-credit-and-how-does-it-work)
-and New Market Tax Credits
-
-[(NMTC)](https://www.novoco.com/resource-centers/new-markets-tax-credits/nmtc-basics/new-markets-tax-credit-program-summary).
+New Market Tax Credits  [(NMTC)](https://www.novoco.com/resource-centers/new-markets-tax-credits/nmtc-basics/new-markets-tax-credit-program-summary).
 
 ## Data:
 
-Census data is central to this analysis.We have begun using the harmonized Longitudinal Tracts Data Base data to identify potential variables as indicators of 
+Census data is central to this analysis. We have begun using the harmonized Longitudinal Tracts Data Base data to identify potential variables as indicators of 
 gentrification. 
 
 ## Methods:
