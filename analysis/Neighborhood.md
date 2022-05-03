@@ -102,7 +102,6 @@ set.seed(1234)
 
 pairs(measurement.1, lower.panel = panel.smooth, upper.panel = panel.cor)
 ```
-![](https://jmacost5.github.io/CPP-528-Project/assets/img/screenshots/chapter_name_on_home_page.png)<!-- -->
 
 ``` r
 measurement.2 <- select(df, Black.change, College.change, Unemp.change, MHV.Change.00.to.10) %>% na.omit ()
@@ -113,8 +112,7 @@ set.seed(1234)
 
 pairs(measurement.2, lower.panel = panel.smooth, upper.panel = panel.cor)
 ```
-
-![](https://github.com/jmacost5/CPP-528-Project/blob/main/assets/img/screenshots/Variables%20Correlation.png)
+![](https://jmacost5.github.io/CPP-528-Project/assets/img/screenshots/Variables_Correlation.png)<!-- -->
 
 ## Median Home Value
 
@@ -129,8 +127,7 @@ axis( side=1, at=seq(0,500000,100000),
       labels=c("$0","$100k","$200k","$300k","$400k","$500k") )
 abline( v=median( df$MedianHomeValue2000, na.rm=T ), col="orange", lwd=3 )
 ```
-
-![](https://github.com/jmacost5/CPP-528-Project/blob/main/assets/img/screenshots/MHV%20in%202000.png)
+![](https://jmacost5.github.io/CPP-528-Project/assets/img/screenshots/MHV_in_2000.png)<!-- -->
 
 ### Descriptives
 
@@ -164,8 +161,7 @@ text( x=200, y=2000,
       labels=paste0( "Median = ", dollar( round(1000*median.x,0)) ), 
       col="dodgerblue", cex=1.8, pos=3 )
 ```
-
-![](https://github.com/jmacost5/CPP-528-Project/blob/main/assets/img/screenshots/Growth%20in%20MHV%20from%202000%20to%202010.png)
+![](https://jmacost5.github.io/CPP-528-Project/assets/img/screenshots/Growth_in_MHV_from_2000_to_2010.png)<!-- -->
 
 ### Percent Change in Median Home Value 2000 to 2010
 
@@ -192,9 +188,6 @@ text( x=100, y=(0.6*ymax),
       col="dodgerblue", cex=1.8, pos=4 )
 ```
 
-![MHV Change](https://github.com/jmacost5/CPP-528-Project/blob/main/assets/images/DorlingCartogram.png)
-
-![](https://github.com/jmacost5/CPP-528-Project/blob/main/assets/img/2021-11-12-ch03-mhv_files/figure-gfm/unnamed-chunk-14-1.png)
 
  
   
@@ -253,8 +246,7 @@ abline( b0.syracuse, b1, col="steelblue", lwd=3 )
 abline( b0.tyler, b1, col="green3", lwd=3 )
 abline( b0.youngston, b1, col="darkorange", lwd=3 )
 ```
-           
-![](https://github.com/jmacost5/CPP-528-Project/blob/main/assets/img/screenshots/Baseline%20MHV%20Growth%202000-2010.png)         
+![](https://jmacost5.github.io/CPP-528-Project/assets/img/screenshots/Baseline_MHV_Growth_2000-2010.png)<!-- -->                
            
            
            
@@ -284,7 +276,7 @@ stargazer( m1,m2, m3, m4,
            
 ```
 
-![](https://github.com/jmacost5/CPP-528-Project/blob/main/assets/img/screenshots/Regression%20Table.png) 
+![](https://jmacost5.github.io/CPP-528-Project/assets/img/screenshots/Regression_Table.png)<!-- -->    
 
 
 
@@ -319,8 +311,8 @@ stargazer( m1, m2, m3, m4,
            omit="cbsa",
            add.lines = list(c("Metro Fixed Effects:", "NO", "NO","NO", "YES")) )
 ```
- 
-![](https://github.com/jmacost5/CPP-528-Project/blob/main/assets/img/screenshots/Regression%20Table%20after%20adding%20the%20fixed%20effect.png)  
+
+![](https://jmacost5.github.io/CPP-528-Project/assets/img/screenshots/Regression_Table_after_adding_the_fixed_effect.png)<!-- -->    
 
      
 
