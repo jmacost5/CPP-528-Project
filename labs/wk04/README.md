@@ -1,6 +1,6 @@
 # Lab 04 Predicting MHV Change
 
-This lab is designed to allow us build our baseline model of neighborhood change before adding the policy variables in the next lab.
+This lab is designed to allow us build our baseline model of neighborhood change before adding the policy variables in the next lab
 
 **Part 1 - Data**
 We created a dataset that includes 2000 and 2010 census variables after dropping all rural census tracts.
