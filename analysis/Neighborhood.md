@@ -114,7 +114,7 @@ set.seed(1234)
 pairs(measurement.2, lower.panel = panel.smooth, upper.panel = panel.cor)
 ```
 
-![](https://github.com/jmacost5/CPP-528-Project/tree/main/assets/img/screenshots)
+![](https://github.com/jmacost5/CPP-528-Project/blob/main/assets/img/screenshots/Variables%20Correlation.png)
 
 ## Median Home Value
 
@@ -197,50 +197,8 @@ text( x=100, y=(0.6*ymax),
 ![](https://github.com/jmacost5/CPP-528-Project/blob/main/assets/img/2021-11-12-ch03-mhv_files/figure-gfm/unnamed-chunk-14-1.png)
 
  
- ## Metro Level Statistics
-
-#### Metro Demographics
-
-*College Graduates*
-
-![](https://r-class.github.io/cpp-528-fall-2021-group-05/assets/img/2021-11-12-ch03-mhv_files/figure-gfm/unnamed-chunk-16-1.png)
-
-![](https://r-class.github.io/cpp-528-fall-2021-group-05/assets/img/2021-11-12-ch03-mhv_files/figure-gfm/unnamed-chunk-17-1.png)
-
-*Unemployment Rate*
-
-![](https://r-class.github.io/cpp-528-fall-2021-group-05/assets/img/2021-11-12-ch03-mhv_files/figure-gfm/unnamed-chunk-18-1.png)
-
-![](https://r-class.github.io/cpp-528-fall-2021-group-05/assets/img/2021-11-12-ch03-mhv_files/figure-gfm/unnamed-chunk-19-1.png)
-
-*Percentage of black*
-
-![](https://r-class.github.io/cpp-528-fall-2021-group-05/assets/img/2021-11-12-ch03-mhv_files/figure-gfm/unnamed-chunk-20-1.png)
-
-![](https://r-class.github.io/cpp-528-fall-2021-group-05/assets/img/2021-11-12-ch03-mhv_files/figure-gfm/unnamed-chunk-21-1.png)
   
-**Correlation between MHV and College Graduates**
-
-``` r
-jplot( df$College.change, df$MHV.Growth.00.to.12, ylim=c(-50,100),
-       lab1="College Graduates", lab2="MHV Growth" )
-```
-
-![](https://r-class.github.io/cpp-528-fall-2021-group-05/assets/img/2021-11-12-ch03-mhv_files/figure-gfm/unnamed-chunk-22-1.png)
-
-``` r
-jplot( df$Unemp.change, df$MHV.Growth.00.to.12, ylim=c(-50,100),
-       lab1="Unemployment Rates", lab2="MHV Growth" )
-```
-
-![](https://r-class.github.io/cpp-528-fall-2021-group-05/main/assets/img/2021-11-12-ch03-mhv_files/figure-gfm/unnamed-chunk-23-1.png)
-
-``` r
-jplot( df$Black.change, df$MHV.Growth.00.to.12, ylim=c(-50,100),
-       lab1="Black People Number", lab2="MHV Growth" )
-```
-
-![](https://r-class.github.io/cpp-528-fall-2021-group-05/assets/img/2021-11-12-ch03-mhv_files/figure-gfm/unnamed-chunk-24-1.png)
+ 
 
 ## Including regression output
 
@@ -266,138 +224,7 @@ stargazer( m1, m2, m3, m4,
            omit.stat = c("rsq","f") )
            
            
-## Group Structure
 
-``` r
-d5 <- filter( d, cbsaname %in% 
-                c("Tyler, TX",
-                  "Minneapolis-St. Paul-Bloomington, MN-WI",
-                  "San Francisco-San Mateo-Redwood City,CA") )
-d5$cbsaname <- factor( d5$cbsaname, labels=c("MSP-MN","SF-CA","Tyler-TX") )
-par( mar=c(4,6,4,6), mfrow=c(1,2) )
-plot( d5$cbsaname,  d5$mhv.00, las=1, frame.plot=F, outline=F,
-      xlab="", ylab="", main="Home Values in 2000" )
-abline( h=seq(0,1200000,100000), lty=3, col=gray(0.5,0.3) )
-axis( side=4, las=1 )
-plot( d5$cbsaname,  d5$p.unemp, las=1, frame.plot=F, outline=F,
-      xlab="", ylab="", main="Unemployment Rates in 2000" )
-abline( h=seq(0,15,1), lty=3, col=gray(0.5,0.3) )
-axis( side=4, las=1 )
-```
-
-![](https://r-class.github.io/cpp-528-fall-2021-group-05/assets/img/2021-11-12-ch03-mhv_files/figure-gfm/unnamed-chunk-25-1.png)
-
-**College Graduates 2000 Metro Level**
-
-``` r
-d5 <- filter( d, cbsaname %in% 
-                c("Tyler, TX",
-                  "Minneapolis-St. Paul-Bloomington, MN-WI",
-                  "San Francisco-San Mateo-Redwood City,CA") )
-d5$cbsaname <- factor( d5$cbsaname, labels=c("MSP-MN","SF-CA","Tyler-TX") )
-par( mar=c(4,6,4,6), mfrow=c(1,2) )
-plot( d5$cbsaname,  d5$mhv.00, las=1, frame.plot=F, outline=F,
-      xlab="", ylab="", main="Home Values in 2000" )
-abline( h=seq(0,1200000,100000), lty=3, col=gray(0.5,0.3) )
-axis( side=4, las=1 )
-plot( d5$cbsaname,  d5$p.col, las=1, frame.plot=F, outline=F,
-      xlab="", ylab="", main="College Graduates in 2000" )
-abline( h=seq(0,15,1), lty=3, col=gray(0.5,0.3) )
-axis( side=4, las=1 )
-```
-
-![](https://r-class.github.io/cpp-528-fall-2021-group-05/assets/img/2021-11-12-ch03-mhv_files/figure-gfm/unnamed-chunk-26-1.png)
-
-**Black Metro Level**
-
-``` r
-d5 <- filter( d, cbsaname %in% 
-                c("Tyler, TX",
-                  "Minneapolis-St. Paul-Bloomington, MN-WI",
-                  "San Francisco-San Mateo-Redwood City,CA") )
-d5$cbsaname <- factor( d5$cbsaname, labels=c("MSP-MN","SF-CA","Tyler-TX") )
-par( mar=c(4,6,4,6), mfrow=c(1,2) )
-plot( d5$cbsaname,  d5$mhv.00, las=1, frame.plot=F, outline=F,
-      xlab="", ylab="", main="Home Values in 2000" )
-abline( h=seq(0,1200000,100000), lty=3, col=gray(0.5,0.3) )
-axis( side=4, las=1 )
-plot( d5$cbsaname,  d5$black.00, las=1, frame.plot=F, outline=F,
-      xlab="", ylab="", main="Black People in 2000" )
-abline( h=seq(0,15,1), lty=3, col=gray(0.5,0.3) )
-axis( side=4, las=1 )
-```
-
-![](https://r-class.github.io/cpp-528-fall-2021-group-05/assets/img/2021-11-12-ch03-mhv_files/figure-gfm/unnamed-chunk-27-1.png)
-
-**Health of City 2000 to 2010 Grouped**
-
-``` r
-d5 <- filter( d, cbsaname %in%
-                c("Tyler, TX",
-                  "Youngstown-Warren-Boardman, OH-PA",
-                  "Syracuse, NY") )
-d5$mhv.growth[ d5$mhv.growth > 200 ] <- NA
-d5$p.unemp.00 <- log10( d5$p.unemp.00 + 1 )
-x <- rnorm( nrow(d5), 0, 0.1 ) +
-     as.numeric( d5$cbsaname == "Tyler, TX" ) + 
-     2 * as.numeric( d5$cbsaname == "Youngstown-Warren-Boardman, OH-PA" ) + 
-     3* as.numeric( d5$cbsaname == "Syracuse, NY" ) 
-par( mfrow=c(1,2) )
-plot( x, d5$mhv.growth, 
-      pch=19, cex=1.5, bty = "n",  
-        col=factor(d5$cbsa),
-      ylim=c(-50,50),
-      xaxt="n", 
-      ylab="", xlab="",
-      main="MHV Growth")
-axis( side=1, at=1:3, labels=c("Tyler","Youngstown","Syracuse"), 
-      tick=F, col.axis="gray60", cex.axis=1.3 )
-plot( x, d5$p.unemp, 
-      pch=19, cex=1.5, bty = "n",  
-        col=factor(d5$cbsa),
-      # ylim=c(0,40),
-      xaxt="n", 
-      ylab="", xlab="",
-      main="Unemployment (logged)")
-axis( side=1, at=1:3, labels=c("Tyler","Youngstown","Syracuse"), 
-      tick=F, col.axis="gray60", cex.axis=1.3 )
-```
-
-![](https://r-class.github.io/cpp-528-fall-2021-group-05/assets/img/2021-11-12-ch03-mhv_files/figure-gfm/unnamed-chunk-28-1.png)
-
-``` r
-d5 <- filter( d, cbsaname %in%
-                c("Tyler, TX",
-                  "Youngstown-Warren-Boardman, OH-PA",
-                  "Syracuse, NY") )
-d5$mhv.growth[ d5$mhv.growth > 200 ] <- NA
-#d5$p.col <- log10( d5$p.col + 1 )
-x <- rnorm( nrow(d5), 0, 0.1 ) +
-     as.numeric( d5$cbsaname == "Tyler, TX" ) + 
-     2 * as.numeric( d5$cbsaname == "Youngstown-Warren-Boardman, OH-PA" ) + 
-     3* as.numeric( d5$cbsaname == "Syracuse, NY" ) 
-par( mfrow=c(1,2) )
-plot( x, d5$mhv.growth, 
-      pch=19, cex=1.5, bty = "n",  
-        col=factor(d5$cbsa),
-      ylim=c(-50,50),
-      xaxt="n", 
-      ylab="", xlab="",
-      main="MHV Growth")
-axis( side=1, at=1:3, labels=c("Tyler","Youngstown","Syracuse"), 
-      tick=F, col.axis="gray60", cex.axis=1.3 )
-plot( x, d5$p.col, 
-      pch=19, cex=1.5, bty = "n",  
-        col=factor(d5$cbsa),
-      # ylim=c(0,40),
-      xaxt="n", 
-      ylab="", xlab="",
-      main="College")
-axis( side=1, at=1:3, labels=c("Tyler","Youngstown","Syracuse"), 
-      tick=F, col.axis="gray60", cex.axis=1.3 )
-```
-
-![](https://r-class.github.io/cpp-528-fall-2021-group-05/assets/img/2021-11-12-ch03-mhv_files/figure-gfm/unnamed-chunk-29-1.png)
 
  **Baseline metro-level home value growth**
  
