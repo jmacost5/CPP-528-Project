@@ -16,7 +16,7 @@ million housing units placed in service between 1987 and 2017.
 Used previsouly built baseline model predicting tract change from Lab 04
 as the starting point.
 
-Created a log-linear diff-in-diff model following these steps and added
+Created a log-linear diff-in-diff model and added
 control variables from Lab 04.
 
 Interpreted the main results from the models are assuming median home
