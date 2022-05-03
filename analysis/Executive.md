@@ -10,7 +10,7 @@ title: Executive Summary
 ## Overview & Research Question:
 
 In this project we are ultimately interested in building models to explain neighborhood change between 1990 and 2010 in the United States of America.
-Neighborhood change is a term to describe processes of physical and socioeconomic change within and in-between neighborhoods.[a]
+Neighborhood change is a term to describe processes of physical and socioeconomic change within and in-between neighborhoods [a].
 
 The research question presented was if two federal tax programs motivated positive growth to revitalize neighborhoods between the yearsof 2000-2010. 
 The two programs analyzed were:
