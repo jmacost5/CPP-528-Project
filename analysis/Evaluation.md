@@ -2,6 +2,58 @@
 layout: page
 title: Evaluation of Tax Credit Programs
 ---
+# Introduction 
+# Effect of Tax Programs
+
+## Tax Program Details
+
+The Low-Income Housing Tax Credit (LIHTC) subsidizes the acquisition,
+construction, and rehabilitation of affordable rental housing for low-
+and moderate-income tenants. The LIHTC was enacted as part of the 1986
+Tax Reform Act and has been modified numerous times. Since the
+mid-1990s, the LIHTC program has supported the construction or
+rehabilitation of about 110,000 affordable rental units each year
+(though there was a steep drop-off after the Great Recession of 2008-09)
+over 2 million units in all since its inception.
+
+The federal government issues tax credits to state and territorial
+governments. State housing agencies then award the credits to private
+developers of affordable rental housing projects through a competitive
+process. Developers generally sell the credits to private investors to
+obtain funding. Once the housing project is placed in service
+(essentially, made available to tenants), investors can claim the LIHTC
+over a 10-year period.[1]
+
+On the last day of its 2000 session, Congress created the New Markets
+Tax Credit program, part of the Community Renewal Tax Relief Act of
+2000, to encourage investment in low-income communities. The program is
+designed to generate $15 billion in new private sector investments in
+low-income communities.
+
+Qualified Community Development Entities (CDE) will apply to the CDFI
+Fund for an award of new markets tax credits. The CDE will then seek
+taxpayers to make Qualifying Equity Investments in the CDE. The CDE will
+in turn be required to use substantially all of the qualifying equity
+investments to make qualified low-income community investments (QLICI)
+in/to qualified active low-income businesses (QALICBs) located in
+low-income communities. The taxpayer will be eligible to claim a tax
+credit equal to 5 percent of its equity investment in the CDE for each
+of the first three years and a 6 percent credit for each of the next
+four years (39 percent total).[2]
+
+The goal of both of these programs was to help distressed communities by
+providing billions of dollars in funding to improve housing,
+infrastructure, and neighborhoods. In addition to the median home value
+dependent variable, the researchers have chosen to measure
+gentrification as a means to determine neighborhood progress. The term
+gentrification means, “the process of renewal and rebuilding accompanied
+by the influx of middle-class or affluent people into deteriorating
+areas that often displaces poor residents.”[3] The purpose of using
+gentrification as a measurement, despite the potentially
+controversiality, is to find other variables that might indicate that
+the tax programs are having their intended effect - so that we do not
+myopically focus on median home value to the exclusion of other
+attributes.
 
 ## Data File
 
@@ -438,5 +490,18 @@ _5892_
 ### The Department of Housing and Urban Development. *LIHTCPUB* Retrieved from: https://github.com/DS4PS/cpp-528-spr-2020/blob/master/labs/data/raw/LIHTC/LIHTCPUB.csv
 
 ### U.S. Department of the Treasury’s Community Development Financial Institutions Fund. *NMTC-Sheet-01* Retreived from: https://github.com/DS4PS/cpp-528-spr-2020/blob/master/labs/data/raw/NMTC/nmtc-sheet-01.csv
+
+[1] What is the Low-Income Housing Tax Credit and how does it work?. Tax
+Policy Center. Retrieved November 19, 2021, from
+<https://www.taxpolicycenter.org/briefing-book/what-low-income-housing-tax-credit-and-how-does-it-work>
+
+[2] New Markets Tax Credit Program Summary. (2016, January 6).
+<https://www.novoco.com/resource-centers/new-markets-tax-credits/nmtc-basics/new-markets-tax-credit-program-summary>
+
+[3] cpp-529-spr-2020. (2021, September 28).
+<https://github.com/DS4PS/cpp-529-spr-2020/blob/49cb2ad7384eca56f291a408c8d89f3348a54ec5/lectures/Gentrification_and_affordable_housing_2016.pdf>
+
+
+
 
 
