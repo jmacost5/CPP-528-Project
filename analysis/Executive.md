@@ -3,7 +3,6 @@ title: Executive Summary
 
 ---
 
-![New York, NY Skyline](https://wallpaperaccess.com/full/566261.jpg)
 
 # Executive Summary
 
