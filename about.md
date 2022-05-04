@@ -44,6 +44,8 @@ The Jekyll website design was adapted from Niklas Buschmann's [contrast theme](h
 
 You can find the source code that powers this website [on this GitHub repo](https://github.com/R-Class/cpp-528-template).
 
+The GitHub repo for this analysis/website is located [here](https://github.com/jmacost5/CPP-528-Project).
+
 <!--- CSS for Circles --->
 
 <style>
