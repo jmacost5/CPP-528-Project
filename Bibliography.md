@@ -1,13 +1,6 @@
----
-title: "Bibliography"
-author: "Kara Brick/Team1"
-date: "5/3/2022"
-output: html_document
----
-
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-```
+___
+title: Bibliography
+___
 
 ### References
 
