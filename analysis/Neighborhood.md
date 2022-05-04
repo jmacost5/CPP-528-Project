@@ -330,7 +330,7 @@ text( x=100, y=(0.6*ymax),
 
 
 
-```{r, include=FALSE}
+```{r}
 reg.data <- d
 reg.data$mhv.growth[ d2$mhv.growth > 200 ] <- NA
 reg.data$p.col <- log10( d2$p.col + 1 )
@@ -364,7 +364,7 @@ stargazer( m1,m2, m3, m4,
 
 
 
-```{r,echo=FALSE}
+```{r}
 d.reg <- d
 d.reg$mhv.growth[ d.reg$mhv.growth > 200 ] <- NA
 d.reg$p.unemp <- log10( d.reg$p.unemp + 1 )
