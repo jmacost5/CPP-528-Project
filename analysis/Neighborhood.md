@@ -17,7 +17,7 @@ library(namespace)
 
 
 
-### Today’s date is “May 2nd, 2022”
+### Today’s date is “May 3rd, 2022”
 
 ## Data Information
 
@@ -27,9 +27,9 @@ library(namespace)
 
 -   Percentage of College Graduates: An increase in the percentage of college graduates may indicate
     gentrification
--   Percentage of unemployed: A decrease in the unemployment rate may indicate
+-   Percentage of Unemployed: A decrease in the unemployment rate may indicate
     gentrification
--   Percentage Black population: A decrease in the percentage of Black population may indicate gentrification
+-   Percentage Black Population: A decrease in the percentage of Black population may indicate gentrification
 
 
 
