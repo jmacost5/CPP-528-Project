@@ -23,13 +23,13 @@ library(namespace)
 
 ## Census Variables
 
-### The following factors were chosen to identify gentrification:
+### The following factors were chosen to identify gentrification with the following hypothesis:
 
--   Percentage of College Graduates: A decrease in the percentage of college graduates’ income may indicate
+-   Percentage of College Graduates: An increase in the percentage of college graduates may indicate
     gentrification
 -   Percentage of unemployed: A decrease in the unemployment rate may indicate
     gentrification
--   Percentage of black: A decrease in the percentage of black may indicate gentrification
+-   Percentage Black population: A decrease in the percentage of Black population may indicate gentrification
 
 
 
@@ -68,7 +68,7 @@ d$unemp.growth[d$unemp.growth > 80 | d$unemp.growth < 1] <- NA
 
 
 ```{r}
-#Percentage of Black 
+#Percentage of Black population
 black.00 <- d$p.black.00
 black.10 <- d$p.black.10
 black.change <- black.10 - black.00
@@ -325,7 +325,7 @@ text( x=100, y=(0.6*ymax),
 
 
 
-### Regression shows mutlicolinearity in coefficient and SD for percent black. Standard deviations increased for all variables but coefficents increased for percent college graduates and percent unemployed.
+### Regression shows mutlicolinearity in coefficient and standard deviation for percent Black population. Standard deviations increased for all variables but coefficents increased for percent college graduates and percent unemployed.
 
 
 
@@ -344,7 +344,6 @@ stargazer( m1,m2, m3, m4,
            type='html', 
            digits=2,
            omit.stat = c("rsq","f") )
-
 ```
 
 
@@ -388,7 +387,6 @@ stargazer( m1, m2, m3, m4,
            omit.stat = c("rsq","f"),
            omit="cbsa",
            add.lines = list(c("Metro Fixed Effects:", "NO", "NO","NO", "YES")) )
-
 ```
 ![](https://jmacost5.github.io/CPP-528-Project/assets/img/screenshots/Regression_Table_after_adding_the_fixed_effect.png)<!-- -->    
 
