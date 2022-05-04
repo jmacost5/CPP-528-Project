@@ -31,11 +31,9 @@ We used the a difference-in-difference model to study the effect of Tax programs
 
 ## Results:
 
-Our variables percent college educated, percent Black population, and percent unemployed were significant to the model but we cannot say that they are the only or the main indicators as it is a complex formula including many variables that each have an impact on the results.
+Our variables percent college educated, percent Black population, and percent unemployed were significant to the models but we cannot say that they are the only or the main indicators as it is a complex formula including many variables that each have an impact on the results.
 
-One surprising finding of this study was that the median home value in many communities was lower in the tracts that had received both the LIHTC and the NMTC which leads us to question both the efficiency and the success factors of these programs.
-
-
+NMTC’s model for low-income housing resulted in higher MHV growth than the secular trend, and it may be inferred that it improved the neighborhoods.
 
 
 [1]Schulze Bäing A. (2014) Neighborhood Change. In: Michalos A.C. (eds) Encyclopedia of Quality of Life and Well-Being Research. Springer, Dordrecht. https://doi.org/10.1007/978-94-007-0753-5_1929
