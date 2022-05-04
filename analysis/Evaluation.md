@@ -420,7 +420,7 @@ _5892_
 
 
 
-#### In conclusion, it can be said that NMTC's model for low-income housing resulted in higher MHV growth than the secular trend, and it may be inferred that this leads to value improvement of neighborhoods, because home prices tend to reflect the quality of life value of the neighborhoods. However, because the NMTC approaach tended to have a 'middle of the road' approach to percent poverty tracts chosen, as seen by our data visualizations ("2000 Poverty Rate Comparison of \nRecipient and Non-Recipient Communities"), it is possible that they chose tracts strategically in areas that would have seen growth anyway, and less people in poverty actually benefited from these programs. Testing this hypothesis would require a different framework that was people-based, not place-based. 
+#### In conclusion, it can be said that NMTC's model for low-income housing resulted in higher MHV growth than the secular trend, and it may be inferred that this leads to value improvement of neighborhoods, because home prices tend to reflect the quality of life value of the neighborhoods. However, because the NMTC approach tended to have a 'middle of the road' approach to percent poverty tracts chosen, as seen by our data visualizations ("2000 Poverty Rate Comparison of \nRecipient and Non-Recipient Communities"), it is possible that they chose tracts strategically in areas that would have seen growth anyway, and less people in poverty actually benefited from these programs. Testing this hypothesis would require a different framework that was people-based, not place-based. 
 
 ### References
 
