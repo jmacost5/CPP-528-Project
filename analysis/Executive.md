@@ -20,7 +20,7 @@ New Market Tax Credits  [(NMTC)](https://www.novoco.com/resource-centers/new-mar
 
 ## Data:
 
-Census data is central to this analysis. We have begun using the harmonized Longitudinal Tracts Data Base (LTDB) to identify potential variables as indicators of 
+Census data is central to this analysis. We used the harmonized Longitudinal Tracts Data Base (LTDB) to identify potential variables as indicators of 
 gentrification as well as Low Income Housing Tax Credit (LIHTC) data, and New Market Tax Credit (NMTC) data for the tax programs.
 
 ## Methods:
