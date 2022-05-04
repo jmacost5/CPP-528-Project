@@ -1,6 +1,3 @@
-___
-title: Bibliography
-___
 
 ### References
 
