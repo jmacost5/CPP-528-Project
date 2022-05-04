@@ -1,5 +1,5 @@
 ---
-title: About the team
+title: About the Team
 subtitle: The humans behind this project
 team:
   - name: Jestrii Acosta
