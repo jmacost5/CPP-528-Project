@@ -4,7 +4,6 @@ title: Executive Summary
 ---
 
 
-# Executive Summary
 
 ## Overview & Research Question:
 
